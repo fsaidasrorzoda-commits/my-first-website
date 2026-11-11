@@ -10,13 +10,6 @@
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #101014;
-    color: #ffffff;
-    line-height: 1.7;
-}
-
 html {
     scroll-padding-top: 85px;
 }
@@ -29,6 +22,12 @@ html {
     --gray: #b5b5c3;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.7;
+}
 
 /* =========================
    NAVIGATION
@@ -78,7 +77,6 @@ html {
     color: var(--purple);
 }
 
-
 /* =========================
    HERO SECTION
 ========================= */
@@ -127,6 +125,24 @@ html {
     font-size: 23px;
     color: #dddddd;
     margin-bottom: 20px;
+    min-height: 40px;
+}
+
+/* TYPING ANIMATION */
+
+#typing-text {
+    color: var(--purple);
+}
+
+.cursor {
+    color: var(--purple);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-description {
@@ -140,7 +156,6 @@ html {
     gap: 15px;
     flex-wrap: wrap;
 }
-
 
 /* =========================
    BUTTONS
@@ -175,7 +190,6 @@ html {
     color: #101014;
 }
 
-
 /* =========================
    PROFILE IMAGE
 ========================= */
@@ -190,7 +204,6 @@ html {
     box-shadow:
         0 0 30px rgba(167, 139, 250, 0.3);
 }
-
 
 /* =========================
    GENERAL SECTIONS
@@ -231,9 +244,8 @@ html {
     margin: 0 auto 20px;
 }
 
-
 /* =========================
-   SKILLS AND HOBBIES CARDS
+   SKILLS AND HOBBIES
 ========================= */
 
 .cards {
@@ -254,7 +266,8 @@ html {
 .card:hover {
     transform: translateY(-8px);
     border-color: var(--purple);
-    box-shadow: 0 8px 25px rgba(167, 139, 250, 0.12);
+    box-shadow:
+        0 8px 25px rgba(167, 139, 250, 0.12);
 }
 
 .card h3 {
@@ -266,7 +279,6 @@ html {
     color: var(--gray);
     font-size: 14px;
 }
-
 
 /* =========================
    CONTACT
@@ -280,7 +292,6 @@ html {
     margin-top: 15px;
 }
 
-
 /* =========================
    FOOTER
 ========================= */
@@ -293,7 +304,6 @@ footer {
     color: var(--gray);
     font-size: 14px;
 }
-
 
 /* =========================
    RESPONSIVE DESIGN
@@ -365,19 +375,5 @@ footer {
 
     .section h2 {
         font-size: 29px;
-    }
-}
-#typing-text {
-    color: var(--purple);
-}
-
-.cursor {
-    color: var(--purple);
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
     }
 }
