@@ -1,99 +1,78 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Firdavs - IT Teacher, Programmer and Technology Enthusiast">
-
     <title>Firdavs | Personal Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <a href="#home" class="logo">Firdavs<span>.</span></a>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Firdavs<span>.</span></h2>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- HERO SECTION -->
-    <header id="home" class="hero">
-
+    <!-- Home Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
+            <p class="welcome">WELCOME TO MY WEBSITE</p>
 
-            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
-
-            <h1>Hi, I'm <span>Firdavs</span></h1>
+            <h1>Hello, I'm <span>Firdavs</span></h1>
 
             <h2>
                 <span id="typing-text"></span>
                 <span class="cursor">|</span>
             </h2>
 
-            <p class="hero-description">
+            <p>
+                Welcome to my personal portfolio.
                 I love technology, programming and education.
-                I enjoy learning new things, creating projects
-                and sharing knowledge with others.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#contact" class="button primary">
-                    Contact Me
-                </a>
-
-                <a href="#about" class="button secondary">
-                    About Me
-                </a>
-            </div>
-
+            <a href="#about" class="btn">Discover More</a>
         </div>
 
         <div class="hero-image">
             <img src="profile.png" alt="Firdavs profile photo">
         </div>
-
-    </header>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-
-        <p class="section-label">GET TO KNOW ME</p>
-
-        <h2>About <span>Me</span></h2>
-
-        <p>
-            Hello! My name is Firdavs. I am an IT teacher
-            who is passionate about computers, technology
-            and modern education.
-
-            I believe that learning never stops.
-            My goal is to improve my knowledge,
-            develop new skills and inspire students
-            to explore the world of technology.
-        </p>
-
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <p>
+                My name is Firdavs. I am an IT teacher and technology
+                enthusiast. I enjoy learning new technologies,
+                programming and sharing knowledge with students.
+            </p>
+
+            <p>
+                My goal is to improve my skills and become a modern
+                educator who inspires others to explore technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="section">
-
-        <p class="section-label">WHAT I KNOW</p>
-
-        <h2>My <span>Skills</span></h2>
+        <h2 class="section-title">My Skills</h2>
 
         <div class="cards">
-
             <div class="card">
                 <h3>HTML</h3>
                 <p>Creating website structures.</p>
@@ -111,82 +90,60 @@
 
             <div class="card">
                 <h3>C++</h3>
-                <p>Learning programming logic.</p>
-            </div>
-
-            <div class="card">
-                <h3>Python</h3>
-                <p>Exploring programming and automation.</p>
+                <p>Learning programming and logic.</p>
             </div>
 
             <div class="card">
                 <h3>Microsoft Office</h3>
-                <p>Working with digital documents.</p>
+                <p>Working with Word, Excel and PowerPoint.</p>
             </div>
 
             <div class="card">
-                <h3>Education</h3>
-                <p>Teaching and sharing knowledge.</p>
+                <h3>Scratch</h3>
+                <p>Creating educational projects.</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- HOBBIES SECTION -->
+    <!-- Hobbies Section -->
     <section id="hobbies" class="section">
-
-        <p class="section-label">WHAT I ENJOY</p>
-
-        <h2>My <span>Hobbies</span></h2>
+        <h2 class="section-title">My Hobbies</h2>
 
         <div class="cards">
-
             <div class="card">
-                <h3>Programming</h3>
-                <p>Building projects and learning code.</p>
+                <h3>Technology</h3>
+                <p>Exploring new technologies and innovations.</p>
             </div>
 
             <div class="card">
                 <h3>Football</h3>
-                <p>Enjoying sports and teamwork.</p>
+                <p>Playing and watching football.</p>
             </div>
 
             <div class="card">
-                <h3>Technology</h3>
-                <p>Discovering new digital tools.</p>
+                <h3>Learning</h3>
+                <p>Discovering new things every day.</p>
             </div>
-
         </div>
-
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section contact">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
 
-        <p class="section-label">LET'S CONNECT</p>
-
-        <h2>Contact <span>Me</span></h2>
-
-        <p>
-            Have a question or want to work together?
-            Feel free to contact me.
-        </p>
-
-        <a href="mailto:your-email@example.com"
-           class="button primary">
-            Send Me an Email
-        </a>
-
+        <div class="contact-content">
+            <p>Thank you for visiting my website!</p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Firdavs. All rights reserved.</p>
         <p>Designed and built with HTML, CSS & JavaScript.</p>
+        <p>© 2026 Firdavs. All rights reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT TYPING ANIMATION -->
+    <!-- Typing Animation -->
     <script>
         const words = [
             "IT Teacher",
@@ -200,12 +157,10 @@
         let deleting = false;
 
         function typeEffect() {
-
             const element = document.getElementById("typing-text");
             const currentWord = words[wordIndex];
 
             if (!deleting) {
-
                 element.textContent =
                     currentWord.substring(0, letterIndex + 1);
 
@@ -216,9 +171,7 @@
                     setTimeout(typeEffect, 1500);
                     return;
                 }
-
             } else {
-
                 element.textContent =
                     currentWord.substring(0, letterIndex - 1);
 
