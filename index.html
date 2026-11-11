@@ -1,44 +1,93 @@
 
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My First Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Navigation Menu -->
     <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#skills">My Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-    
+        <h2>My Website</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">My Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-    <h1 id="home">Welcome to My Website!</h1>
+    <!-- Home Section -->
+    <header id="home">
+        <h1>Welcome to My Website!</h1>
+        <p>Hello! Welcome to my personal website.</p>
+        <a href="#about" class="button">Discover More</a>
+    </header>
 
-<section id="about">
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
 
-    <h2>About Me</h2>
+        <img src="profile.png" alt="My Profile Photo" width="200">
+
+        <p>
+            Hello! My name is Ali.
+            I am interested in technology,
+            computers and programming.
+            I enjoy learning new things
+            and developing my skills.
+        </p>
     </section>
-    
-<img src="profile.png" alt="My profile photo" width="200">
 
-<p>Welcome to my personal website!</p>
-
-    <p>Hello! I am learning HTML and GitHub.</p>
-
+    <!-- Skills Section -->
     <section id="skills">
-    <h2>My Skills</h2>
-    <p>HTML, CSS, C++, Python</p>
-</section>
-    
-   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: your-email@example.com</p>
-</section>
+        <h2>My Skills</h2>
 
-    <button>Click Me!</button>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Microsoft Office</li>
+        </ul>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+
+        <p>My favourite hobbies are:</p>
+
+        <ul>
+            <li>Programming</li>
+            <li>Football</li>
+            <li>Technology</li>
+            <li>Learning new things</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>You can contact me by email:</p>
+
+        <a href="mailto:your-email@example.com">
+            Send Me an Email
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 My Personal Website. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
-
