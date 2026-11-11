@@ -1,128 +1,141 @@
 
 
-/* General Settings */
+/* GENERAL SETTINGS */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #eaf2f8;
-    color: #2c3e50;
-    line-height: 1.6;
+    background-color: #111111;
+    color: #ffffff;
+    line-height: 1.7;
 }
 
-/* Navigation Menu */
+/* NAVIGATION */
 nav {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
+    background-color: #1e1e1e;
+    padding: 22px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    border-bottom: 1px solid #333333;
 }
 
 nav h2 {
-    color: white;
+    color: #a78bfa;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     margin: 10px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #f1c40f;
+    color: #a78bfa;
 }
 
-/* Home Section */
+/* HOME */
 header {
     text-align: center;
-    padding: 100px 20px;
-    background-color: #3498db;
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #171717, #30204b);
     color: white;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 46px;
     margin-bottom: 15px;
 }
 
 header p {
-    font-size: 18px;
-    margin-bottom: 25px;
+    color: #cccccc;
+    font-size: 19px;
+    margin-bottom: 30px;
 }
 
-/* Buttons */
+/* BUTTON */
 .button {
     display: inline-block;
-    background-color: #2c3e50;
-    color: white;
-    padding: 12px 25px;
+    background-color: #a78bfa;
+    color: #111111;
+    padding: 13px 28px;
     text-decoration: none;
     border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .button:hover {
-    background-color: #1a252f;
+    background-color: #ffffff;
+    transform: translateY(-3px);
 }
 
-/* Content Sections */
+/* SECTIONS */
 section {
-    background-color: white;
-    margin: 30px auto;
-    padding: 40px;
+    background-color: #1e1e1e;
+    margin: 35px auto;
+    padding: 45px;
     max-width: 900px;
-    border-radius: 12px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #333333;
 }
 
 section h2 {
-    color: #2980b9;
+    color: #a78bfa;
     margin-bottom: 20px;
+    font-size: 28px;
 }
 
 section p {
-    margin-bottom: 15px;
+    color: #cccccc;
 }
 
-/* Profile Image */
+/* PROFILE IMAGE */
 #about img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 4px solid #3498db;
+    border: 4px solid #a78bfa;
 }
 
-/* Lists */
+/* LISTS */
 ul {
     list-style-position: inside;
     margin-top: 15px;
 }
 
 li {
-    margin: 8px;
+    margin: 10px;
+    color: #dddddd;
 }
 
-/* Footer */
+/* CONTACT LINKS */
+section a {
+    color: #a78bfa;
+}
+
+/* FOOTER */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #1e1e1e;
+    color: #aaaaaa;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #333333;
 }
 
-/* Mobile Design */
+/* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
@@ -134,12 +147,16 @@ footer {
         margin: 5px;
     }
 
+    header {
+        padding: 80px 15px;
+    }
+
     header h1 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     section {
-        margin: 15px;
+        margin: 18px;
         padding: 25px;
     }
 }
