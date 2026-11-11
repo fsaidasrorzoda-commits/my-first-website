@@ -36,7 +36,9 @@
 
             <h1>Hi, I'm <span>Firdavs</span></h1>
 
-            <h2>IT Teacher | Technology Enthusiast</h2>
+            <h2>
+    <span id="typing-text"></span><span class="cursor">|</span>
+</h2>
 
             <p class="hero-description">
                 I love technology, programming and education.
@@ -182,6 +184,45 @@
         <p>© 2026 Firdavs. All rights reserved.</p>
         <p>Designed and built with HTML & CSS.</p>
     </footer>
+<script>
+const words = [
+    "IT Teacher",
+    "Programmer",
+    "Technology Enthusiast",
+    "Lifelong Learner"
+];
 
+let wordIndex = 0;
+let letterIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+    const element = document.getElementById("typing-text");
+    const currentWord = words[wordIndex];
+
+    if (!deleting) {
+        element.textContent = currentWord.substring(0, letterIndex + 1);
+        letterIndex++;
+
+        if (letterIndex === currentWord.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        element.textContent = currentWord.substring(0, letterIndex - 1);
+        letterIndex--;
+
+        if (letterIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 60 : 100);
+}
+
+typeEffect();
+</script>
 </body>
 </html>
