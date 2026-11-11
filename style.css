@@ -367,3 +367,17 @@ footer {
         font-size: 29px;
     }
 }
+#typing-text {
+    color: var(--purple);
+}
+
+.cursor {
+    color: var(--purple);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
