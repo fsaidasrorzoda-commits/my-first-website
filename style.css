@@ -1,51 +1,145 @@
 
+
+/* General Settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #eaf2f8;
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #eaf2f8;
     color: #2c3e50;
+    line-height: 1.6;
 }
 
-h1 {
-    background-color: #3498db;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h2 {
-    color: #2980b9;
-}
-
-p {
-    font-size: 20px;
-}
-
-button {
-    background-color: #2ecc71;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
+/* Navigation Menu */
 nav {
     background-color: #2c3e50;
-    padding: 15px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    color: white;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 10px;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: yellow;
+    color: #f1c40f;
 }
 
+/* Home Section */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #1a252f;
+}
+
+/* Content Sections */
 section {
-    padding: 30px;
-    margin: 20px;
+    background-color: white;
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 900px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* Profile Image */
+#about img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #3498db;
+}
+
+/* Lists */
+ul {
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+li {
+    margin: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobile Design */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        margin: 15px;
+        padding: 25px;
+    }
 }
