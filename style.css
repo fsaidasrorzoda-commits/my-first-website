@@ -153,6 +153,78 @@ footer {
     header h1 {
         font-size: 32px;
     }
+    
+/* PROFESSIONAL HERO SECTION */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 8%;
+    min-height: 550px;
+    background: linear-gradient(135deg, #111111, #30204b);
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.welcome {
+    color: #a78bfa;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: #a78bfa;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #bbbbbb;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #a78bfa;
+    box-shadow: 0 0 35px rgba(167,139,250,0.3);
+}
+
+@media (max-width: 600px) {
+    header {
+        text-align: center;
+        padding: 65px 20px;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+}
+
 
     section {
         margin: 18px;
