@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Firdavs - IT Teacher, Programmer and Technology Enthusiast">
 
     <title>Firdavs | Personal Portfolio</title>
 
@@ -26,7 +27,6 @@
         </div>
     </nav>
 
-
     <!-- HERO SECTION -->
     <header id="home" class="hero">
 
@@ -37,8 +37,9 @@
             <h1>Hi, I'm <span>Firdavs</span></h1>
 
             <h2>
-    <span id="typing-text"></span><span class="cursor">|</span>
-</h2>
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </h2>
 
             <p class="hero-description">
                 I love technology, programming and education.
@@ -64,7 +65,6 @@
 
     </header>
 
-
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
 
@@ -85,7 +85,6 @@
 
     </section>
 
-
     <!-- SKILLS SECTION -->
     <section id="skills" class="section">
 
@@ -103,6 +102,11 @@
             <div class="card">
                 <h3>CSS</h3>
                 <p>Designing beautiful websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Making websites interactive.</p>
             </div>
 
             <div class="card">
@@ -128,7 +132,6 @@
         </div>
 
     </section>
-
 
     <!-- HOBBIES SECTION -->
     <section id="hobbies" class="section">
@@ -158,7 +161,6 @@
 
     </section>
 
-
     <!-- CONTACT SECTION -->
     <section id="contact" class="section contact">
 
@@ -178,51 +180,61 @@
 
     </section>
 
-
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Firdavs. All rights reserved.</p>
-        <p>Designed and built with HTML & CSS.</p>
+        <p>Designed and built with HTML, CSS & JavaScript.</p>
     </footer>
-<script>
-const words = [
-    "IT Teacher",
-    "Programmer",
-    "Technology Enthusiast",
-    "Lifelong Learner"
-];
 
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
+    <!-- JAVASCRIPT TYPING ANIMATION -->
+    <script>
+        const words = [
+            "IT Teacher",
+            "Programmer",
+            "Technology Enthusiast",
+            "Lifelong Learner"
+        ];
 
-function typeEffect() {
-    const element = document.getElementById("typing-text");
-    const currentWord = words[wordIndex];
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let deleting = false;
 
-    if (!deleting) {
-        element.textContent = currentWord.substring(0, letterIndex + 1);
-        letterIndex++;
+        function typeEffect() {
 
-        if (letterIndex === currentWord.length) {
-            deleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
+            const element = document.getElementById("typing-text");
+            const currentWord = words[wordIndex];
+
+            if (!deleting) {
+
+                element.textContent =
+                    currentWord.substring(0, letterIndex + 1);
+
+                letterIndex++;
+
+                if (letterIndex === currentWord.length) {
+                    deleting = true;
+                    setTimeout(typeEffect, 1500);
+                    return;
+                }
+
+            } else {
+
+                element.textContent =
+                    currentWord.substring(0, letterIndex - 1);
+
+                letterIndex--;
+
+                if (letterIndex === 0) {
+                    deleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+            }
+
+            setTimeout(typeEffect, deleting ? 60 : 100);
         }
-    } else {
-        element.textContent = currentWord.substring(0, letterIndex - 1);
-        letterIndex--;
 
-        if (letterIndex === 0) {
-            deleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-        }
-    }
+        typeEffect();
+    </script>
 
-    setTimeout(typeEffect, deleting ? 60 : 100);
-}
-
-typeEffect();
-</script>
 </body>
 </html>
