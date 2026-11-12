@@ -324,3 +324,23 @@ footer {
         scroll-behavior: auto;
     }
 }
+
+/* Dark / Light Mode Button */
+
+#theme-toggle {
+    background: var(--purple);
+    color: var(--background);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
