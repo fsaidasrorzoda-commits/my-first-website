@@ -1,112 +1,86 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Firdavs — IT Teacher, Programmer and Technology Enthusiast.">
 
     <title>Firdavs | Personal Portfolio</title>
 
-    <!-- Connect CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-
+    <!-- HEADER AND NAVIGATION -->
     <header>
-
         <nav>
+            <h1 class="logo">Firdavs</h1>
 
-            <h2 class="logo">Firdavs</h2>
-
-            <!-- Mobile Menu Button -->
             <button id="menu-toggle"
-                aria-label="Open menu"
-                aria-expanded="false">
+                    aria-label="Open menu"
+                    aria-expanded="false">
                 ☰
             </button>
 
-            <!-- Navigation Links -->
             <ul id="nav-links">
-
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
 
-            <!-- Dark / Light Mode -->
-            <button id="theme-toggle"
-                aria-label="Switch theme">
+            <button id="theme-toggle" aria-label="Switch theme">
                 ☀️ Light Mode
             </button>
-
         </nav>
-
     </header>
 
 
-    <!-- =========================
-         HOME SECTION
-    ========================== -->
-
+    <!-- HOME SECTION -->
     <section id="home" class="hero">
+        <div class="hero-content">
 
-        <img src="profile.png"
-            alt="Firdavs profile photo">
+            <h1>Hello, I'm Firdavs</h1>
 
-        <h1>
-            Hello, I'm <span>Firdavs</span>
-        </h1>
+            <h2>
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </h2>
 
-        <h2>
-            <span id="typing-text"></span>
-            <span class="cursor">|</span>
-        </h2>
+            <p>
+                Welcome to my personal portfolio!
+                I love technology, programming and education.
+            </p>
 
-        <p>
-            Welcome to my personal website!
-        </p>
+            <a href="#about" class="btn">Discover More</a>
 
-        <a href="#about" class="btn">
-            Learn More
-        </a>
+        </div>
 
+        <img src="profile.png" alt="Firdavs profile photo">
     </section>
 
 
-    <!-- =========================
-         ABOUT SECTION
-    ========================== -->
-
+    <!-- ABOUT SECTION -->
     <section id="about" class="section reveal">
 
         <h2>About Me</h2>
 
         <p>
-            My name is Firdavs. I am an IT teacher
-            who is passionate about technology,
-            programming and education.
+            My name is Firdavs. I am an IT teacher who is passionate
+            about technology, programming and education.
 
-            I enjoy learning new things and
-            sharing my knowledge with students.
+            I enjoy learning new technologies, developing websites
+            and helping students improve their digital skills.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         SKILLS SECTION
-    ========================== -->
-
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section reveal">
 
         <h2>My Skills</h2>
@@ -114,27 +88,33 @@
         <div class="cards">
 
             <div class="card">
-                HTML
+                <h3>HTML</h3>
+                <p>Creating website structures.</p>
             </div>
 
             <div class="card">
-                CSS
+                <h3>CSS</h3>
+                <p>Designing beautiful websites.</p>
             </div>
 
             <div class="card">
-                JavaScript
+                <h3>JavaScript</h3>
+                <p>Making websites interactive.</p>
             </div>
 
             <div class="card">
-                C++
+                <h3>C++</h3>
+                <p>Learning programming and logic.</p>
             </div>
 
             <div class="card">
-                Microsoft Office
+                <h3>Microsoft Office</h3>
+                <p>Working with digital documents.</p>
             </div>
 
             <div class="card">
-                Scratch
+                <h3>Scratch</h3>
+                <p>Creating beginner programming projects.</p>
             </div>
 
         </div>
@@ -142,17 +122,12 @@
     </section>
 
 
-    <!-- =========================
-         PROJECTS SECTION
-    ========================== -->
-
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section reveal">
 
         <h2>My Projects</h2>
 
-        <p>
-            Here are some projects I have worked on.
-        </p>
+        <p>Here are some projects I have worked on.</p>
 
         <div class="cards">
 
@@ -161,19 +136,18 @@
                 <h3>My First Website</h3>
 
                 <p>
-                    My personal portfolio created
-                    using HTML, CSS and JavaScript.
+                    My personal portfolio created using
+                    HTML, CSS and JavaScript.
                 </p>
 
-                <span>
-                    HTML | CSS | JavaScript
-                </span>
+                <span>HTML | CSS | JavaScript</span>
+
                 <a class="project-link"
-   href="https://github.com/fsaidasrorzoda-commits/my-first-website"
-   target="_blank"
-   rel="noopener noreferrer">
-   View Source Code →
-</a>
+                   href="https://github.com/fsaidasrorzoda-commits/my-first-website"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Source Code →
+                </a>
 
             </div>
 
@@ -183,13 +157,10 @@
                 <h3>C++ Programming</h3>
 
                 <p>
-                    Practice programs and exercises
-                    using C++.
+                    Practice programs and exercises using C++.
                 </p>
 
-                <span>
-                    C++ | Programming
-                </span>
+                <span>C++ | Programming</span>
 
             </div>
 
@@ -199,13 +170,11 @@
                 <h3>ICT Education</h3>
 
                 <p>
-                    Educational materials and digital
-                    resources for my students.
+                    Educational materials and digital resources
+                    for my students.
                 </p>
 
-                <span>
-                    ICT | Education
-                </span>
+                <span>ICT | Education</span>
 
             </div>
 
@@ -214,10 +183,7 @@
     </section>
 
 
-    <!-- =========================
-         HOBBIES SECTION
-    ========================== -->
-
+    <!-- HOBBIES SECTION -->
     <section id="hobbies" class="section reveal">
 
         <h2>My Hobbies</h2>
@@ -225,19 +191,18 @@
         <div class="cards">
 
             <div class="card">
-                Learning Technology
+                <h3>Football</h3>
+                <p>I enjoy playing and watching football.</p>
             </div>
 
             <div class="card">
-                Programming
+                <h3>Technology</h3>
+                <p>I love exploring new technologies.</p>
             </div>
 
             <div class="card">
-                Football
-            </div>
-
-            <div class="card">
-                Reading
+                <h3>Learning</h3>
+                <p>I enjoy learning new skills and ideas.</p>
             </div>
 
         </div>
@@ -245,311 +210,83 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT SECTION
-    ========================== -->
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section reveal">
 
-   <section id="contact" class="section reveal">
-    <h2>Contact Me</h2>
-    <p>Feel free to send me a message!</p>
-
-    <form id="contact-form">
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            required
-        >
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Your Email"
-            required
-        >
-
-        <textarea
-            id="message"
-            placeholder="Write your message..."
-            required
-        ></textarea>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-</section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
+        <h2>Contact Me</h2>
 
         <p>
-            © 2026 Firdavs. All Rights Reserved.
+            Have a question or an idea?
+            Feel free to send me a message!
         </p>
 
+        <form
+            id="contact-form"
+            action="https://formsubmit.co/saidovfirdavs244@gmail.com"
+            method="POST"
+        >
+
+            <!-- EMAIL SETTINGS -->
+            <input type="hidden"
+                   name="_subject"
+                   value="New message from Firdavs Portfolio">
+
+            <input type="hidden"
+                   name="_template"
+                   value="table">
+
+            <!-- VISITOR NAME -->
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <!-- VISITOR EMAIL -->
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <!-- VISITOR MESSAGE -->
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message →
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Firdavs. All Rights Reserved.</p>
+        <p>Designed and developed by Firdavs.</p>
     </footer>
 
 
-    <!-- =========================
-         BACK TO TOP BUTTON
-    ========================== -->
-
+    <!-- BACK TO TOP BUTTON -->
     <button id="back-to-top"
-        title="Back to top"
-        aria-label="Back to top">
-
+            title="Back to top"
+            aria-label="Back to top">
         ↑
-
     </button>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-
-        // 1. TYPING ANIMATION
-
-        const typingText =
-            document.getElementById("typing-text");
-
-        const words = [
-            "IT Teacher",
-            "Programmer",
-            "Technology Enthusiast",
-            "Lifelong Learner"
-        ];
-
-        let wordIndex = 0;
-        let charIndex = 0;
-        let deleting = false;
-
-        function typeEffect() {
-
-            const currentWord = words[wordIndex];
-
-            if (deleting) {
-                charIndex--;
-            } else {
-                charIndex++;
-            }
-
-            typingText.textContent =
-                currentWord.substring(0, charIndex);
-
-            let speed = deleting ? 60 : 100;
-
-            if (!deleting && charIndex === currentWord.length) {
-
-                deleting = true;
-                speed = 1500;
-
-            } else if (deleting && charIndex === 0) {
-
-                deleting = false;
-
-                wordIndex =
-                    (wordIndex + 1) % words.length;
-
-                speed = 500;
-
-            }
-
-            setTimeout(typeEffect, speed);
-
-        }
-
-        typeEffect();
-
-
-        // 2. SCROLL REVEAL ANIMATION
-
-        const revealElements =
-            document.querySelectorAll(".reveal");
-
-        const revealObserver =
-            new IntersectionObserver(
-
-                (entries) => {
-
-                    entries.forEach((entry) => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("active");
-
-                            revealObserver.unobserve(entry.target);
-
-                        }
-
-                    });
-
-                },
-
-                { threshold: 0.10 }
-
-            );
-
-        revealElements.forEach((element) => {
-
-            revealObserver.observe(element);
-
-        });
-
-
-        // 3. DARK / LIGHT MODE
-
-        const themeToggle =
-            document.getElementById("theme-toggle");
-
-        const savedTheme =
-            localStorage.getItem("theme");
-
-        if (savedTheme === "light") {
-
-            document.body.classList.add("light-mode");
-
-            themeToggle.textContent = "🌙 Dark Mode";
-
-        } else {
-
-            themeToggle.textContent = "☀️ Light Mode";
-
-        }
-
-
-        themeToggle.addEventListener("click", function () {
-
-            document.body.classList.toggle("light-mode");
-
-            const isLightMode =
-                document.body.classList.contains("light-mode");
-
-            if (isLightMode) {
-
-                localStorage.setItem("theme", "light");
-
-                themeToggle.textContent = "🌙 Dark Mode";
-
-            } else {
-
-                localStorage.setItem("theme", "dark");
-
-                themeToggle.textContent = "☀️ Light Mode";
-
-            }
-
-        });
-
-
-        // 4. BACK TO TOP BUTTON
-
-        const backToTop =
-            document.getElementById("back-to-top");
-
-        window.addEventListener("scroll", function () {
-
-            if (window.scrollY > 300) {
-
-                backToTop.style.display = "block";
-
-            } else {
-
-                backToTop.style.display = "none";
-
-            }
-
-        });
-
-
-        backToTop.addEventListener("click", function () {
-
-            window.scrollTo({
-
-                top: 0,
-
-                behavior: "smooth"
-
-            });
-
-        });
-
-
-        // 5. MOBILE HAMBURGER MENU
-
-        const menuToggle =
-            document.getElementById("menu-toggle");
-
-        const navLinks =
-            document.getElementById("nav-links");
-
-
-        menuToggle.addEventListener("click", function () {
-
-            navLinks.classList.toggle("show");
-
-            const isOpen =
-                navLinks.classList.contains("show");
-
-            menuToggle.textContent =
-                isOpen ? "✕" : "☰";
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Close menu" : "Open menu"
-            );
-
-        });
-
-
-        // Close menu after clicking a link
-
-        document.querySelectorAll("#nav-links a")
-            .forEach(link => {
-
-                link.addEventListener("click", function () {
-
-                    navLinks.classList.remove("show");
-
-                    menuToggle.textContent = "☰";
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open menu"
-                    );
-
-                });
-
-            });
-
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value;
-
-    alert("Thank you, " + name + "! Your message was received.");
-
-    contactForm.reset();
-});
-    </script>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
