@@ -2,20 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="FtFsTsc_7C9yAWbjMAL2BexyVovFgvtkD83gwXV6ib0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-content="Explore Firdavs's personal portfolio. Discover his work as an IT teacher, programming projects, technical skills and passion for technology and education.">
-    <title>Firdavs | Personal Portfolio</title>
+    <!-- SEO DESCRIPTION -->
+    <meta name="description" content="Explore Firdavs's personal portfolio. Discover his work as an IT teacher, programming projects, technical skills and passion for technology and education.">
+
+    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+    <meta name="google-site-verification" content="FtFsTsc_7C9yAWbjMAL2BexyVovFgvtkD83gwXV6ib0" />
+
+    <title>Firdavs | IT Teacher, Programmer & Web Developer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER AND NAVIGATION -->
     <header>
         <nav>
             <h1 class="logo">Firdavs</h1>
@@ -35,17 +38,16 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button id="theme-toggle">
+            <button id="theme-toggle" aria-label="Switch theme">
                 ☀️ Light Mode
             </button>
         </nav>
     </header>
 
-
-    <!-- HOME -->
+    <!-- HOME SECTION -->
     <section id="home" class="hero">
-
         <div class="hero-content">
+
             <h1>Hello, I'm Firdavs</h1>
 
             <h2>
@@ -59,14 +61,14 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
             </p>
 
             <a href="#about" class="btn">Discover More</a>
+
         </div>
 
-        <img src="profile.png" alt="Portrait of Firdavs, IT teacher and programmer">
-
+        <img src="profile.png"
+             alt="Portrait of Firdavs, IT teacher and programmer">
     </section>
 
-
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
 
         <h2>About Me</h2>
@@ -81,8 +83,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
 
     </section>
 
-
-    <!-- SKILLS -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section">
 
         <h2>My Skills</h2>
@@ -123,8 +124,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
 
     </section>
 
-
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
 
         <h2>My Projects</h2>
@@ -134,6 +134,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
         <div class="cards">
 
             <div class="card project-card">
+
                 <h3>My First Website</h3>
 
                 <p>
@@ -149,10 +150,11 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                    rel="noopener noreferrer">
                     View Source Code →
                 </a>
+
             </div>
 
-
             <div class="card project-card">
+
                 <h3>C++ Programming</h3>
 
                 <p>
@@ -160,10 +162,11 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                 </p>
 
                 <span>C++ | Programming</span>
+
             </div>
 
-
             <div class="card project-card">
+
                 <h3>ICT Education</h3>
 
                 <p>
@@ -172,14 +175,14 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                 </p>
 
                 <span>ICT | Education</span>
+
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- HOBBIES -->
+    <!-- HOBBIES SECTION -->
     <section id="hobbies" class="section">
 
         <h2>My Hobbies</h2>
@@ -205,8 +208,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
 
     </section>
 
-
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section">
 
         <h2>Contact Me</h2>
@@ -222,18 +224,16 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
             method="POST"
         >
 
-            <input
-                type="hidden"
-                name="_subject"
-                value="New message from Firdavs Portfolio"
-            >
+            <!-- EMAIL SETTINGS -->
+            <input type="hidden"
+                   name="_subject"
+                   value="New message from Firdavs Portfolio">
 
-            <input
-                type="hidden"
-                name="_template"
-                value="table"
-            >
+            <input type="hidden"
+                   name="_template"
+                   value="table">
 
+            <!-- VISITOR NAME -->
             <input
                 type="text"
                 id="name"
@@ -242,6 +242,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                 required
             >
 
+            <!-- VISITOR EMAIL -->
             <input
                 type="email"
                 id="email"
@@ -250,6 +251,7 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
                 required
             >
 
+            <!-- VISITOR MESSAGE -->
             <textarea
                 id="message"
                 name="message"
@@ -265,21 +267,18 @@ content="Explore Firdavs's personal portfolio. Discover his work as an IT teache
 
     </section>
 
-
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Firdavs. All Rights Reserved.</p>
         <p>Designed and developed by Firdavs.</p>
     </footer>
 
-
-    <!-- BACK TO TOP -->
+    <!-- BACK TO TOP BUTTON -->
     <button id="back-to-top"
             title="Back to top"
             aria-label="Back to top">
         ↑
     </button>
-
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
