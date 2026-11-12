@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Firdavs | Personal Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,7 +27,7 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- Home -->
     <section id="home" class="hero">
         <div class="hero-content">
             <p class="welcome">WELCOME TO MY WEBSITE</p>
@@ -50,7 +52,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section reveal">
         <h2 class="section-title">About Me</h2>
 
@@ -68,11 +70,12 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="section reveal">
         <h2 class="section-title">My Skills</h2>
 
         <div class="cards">
+
             <div class="card">
                 <h3>HTML</h3>
                 <p>Creating website structures.</p>
@@ -102,14 +105,16 @@
                 <h3>Scratch</h3>
                 <p>Creating educational projects.</p>
             </div>
+
         </div>
     </section>
 
-    <!-- Hobbies Section -->
+    <!-- Hobbies -->
     <section id="hobbies" class="section reveal">
         <h2 class="section-title">My Hobbies</h2>
 
         <div class="cards">
+
             <div class="card">
                 <h3>Technology</h3>
                 <p>Exploring new technologies and innovations.</p>
@@ -124,16 +129,23 @@
                 <h3>Learning</h3>
                 <p>Discovering new things every day.</p>
             </div>
+
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section reveal">
         <h2 class="section-title">Contact Me</h2>
 
         <div class="contact-content">
             <p>Thank you for visiting my website!</p>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
         </div>
     </section>
 
@@ -143,8 +155,11 @@
         <p>© 2026 Firdavs. All rights reserved.</p>
     </footer>
 
-    <!-- Typing Animation -->
+    <!-- JavaScript -->
     <script>
+
+        // Typing Animation
+
         const words = [
             "IT Teacher",
             "Programmer",
@@ -157,10 +172,12 @@
         let deleting = false;
 
         function typeEffect() {
+
             const element = document.getElementById("typing-text");
             const currentWord = words[wordIndex];
 
             if (!deleting) {
+
                 element.textContent =
                     currentWord.substring(0, letterIndex + 1);
 
@@ -171,7 +188,9 @@
                     setTimeout(typeEffect, 1500);
                     return;
                 }
+
             } else {
+
                 element.textContent =
                     currentWord.substring(0, letterIndex - 1);
 
@@ -187,27 +206,35 @@
         }
 
         typeEffect();
-        
-/* Scroll Reveal Animation */
 
-const revealElements = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
+        // Scroll Reveal Animation
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                        revealObserver.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.10
             }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
+        );
 
-revealElements.forEach((element) => {
-    revealObserver.observe(element);
-});
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
 
     </script>
 
