@@ -483,3 +483,28 @@ footer {
         padding: 8px;
     }
 }
+
+/* Projects Section */
+
+.project-card {
+    text-align: left;
+    min-height: 200px;
+}
+
+.project-card h3 {
+    color: var(--purple);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.project-card span {
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: bold;
+}
