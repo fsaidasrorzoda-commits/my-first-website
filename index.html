@@ -239,35 +239,38 @@
             revealObserver.observe(element);
         });
 
+
 // Dark / Light Mode Toggle
 
 const themeToggle = document.getElementById("theme-toggle");
 
+// Check saved theme when website opens
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+    themeToggle.textContent = "🌙 Dark Mode";
+} else {
+    themeToggle.textContent = "☀️ Light Mode";
+}
+
+// Change theme when button is clicked
 themeToggle.addEventListener("click", function () {
 
-    // Switch the theme
     document.body.classList.toggle("light-mode");
 
-    // Check the current theme
     const isLightMode =
         document.body.classList.contains("light-mode");
 
-    // Change button text
     if (isLightMode) {
+        localStorage.setItem("theme", "light");
         themeToggle.textContent = "🌙 Dark Mode";
-        themeToggle.setAttribute(
-            "aria-label",
-            "Switch to dark mode"
-        );
     } else {
+        localStorage.setItem("theme", "dark");
         themeToggle.textContent = "☀️ Light Mode";
-        themeToggle.setAttribute(
-            "aria-label",
-            "Switch to light mode"
-        );
     }
-
 });
+
 
     </script>
 
