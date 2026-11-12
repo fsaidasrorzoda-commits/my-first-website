@@ -523,3 +523,39 @@ footer {
     opacity: 0.8;
     transform: translateY(-3px);
 }
+#contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 15px;
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--white);
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 14px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact-form button:hover {
+    opacity: 0.8;
+}
