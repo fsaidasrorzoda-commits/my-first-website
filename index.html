@@ -538,7 +538,17 @@
 
             });
 
+const contactForm = document.getElementById("contact-form");
 
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert("Thank you, " + name + "! Your message was received.");
+
+    contactForm.reset();
+});
     </script>
 
 </body>
