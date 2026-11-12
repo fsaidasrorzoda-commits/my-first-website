@@ -239,6 +239,36 @@
             revealObserver.observe(element);
         });
 
+// Dark / Light Mode Toggle
+
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", function () {
+
+    // Switch the theme
+    document.body.classList.toggle("light-mode");
+
+    // Check the current theme
+    const isLightMode =
+        document.body.classList.contains("light-mode");
+
+    // Change button text
+    if (isLightMode) {
+        themeToggle.textContent = "🌙 Dark Mode";
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to dark mode"
+        );
+    } else {
+        themeToggle.textContent = "☀️ Light Mode";
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to light mode"
+        );
+    }
+
+});
+
     </script>
 
 </body>
