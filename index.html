@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Firdavs | Personal Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,154 +12,100 @@
 
     <!-- Navigation -->
     <header>
-        <nav class="navbar">
-            <h2 class="logo">Firdavs<span>.</span></h2>
+        <nav>
+            <h2 class="logo">Firdavs</h2>
 
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
             <button id="theme-toggle" aria-label="Switch theme">
-    ☀️ Light Mode
-</button>
+                ☀️ Light Mode
+            </button>
         </nav>
     </header>
 
-    <!-- Home -->
+    <!-- Home Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="welcome">WELCOME TO MY WEBSITE</p>
+        <img src="profile.png" alt="Firdavs profile photo">
 
-            <h1>Hello, I'm <span>Firdavs</span></h1>
+        <h1>Hello, I'm <span>Firdavs</span></h1>
 
-            <h2>
-                <span id="typing-text"></span>
-                <span class="cursor">|</span>
-            </h2>
+        <h2>
+            <span id="typing-text"></span>
+            <span class="cursor">|</span>
+        </h2>
 
-            <p>
-                Welcome to my personal portfolio.
-                I love technology, programming and education.
-            </p>
-
-            <a href="#about" class="btn">Discover More</a>
-        </div>
-
-        <div class="hero-image">
-            <img src="profile.png" alt="Firdavs profile photo">
-        </div>
+        <p>Welcome to my personal website!</p>
+        <a href="#about" class="btn">Learn More</a>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="section reveal">
-        <h2 class="section-title">About Me</h2>
+        <h2>About Me</h2>
 
-        <div class="about-content">
-            <p>
-                My name is Firdavs. I am an IT teacher and technology
-                enthusiast. I enjoy learning new technologies,
-                programming and sharing knowledge with students.
-            </p>
-
-            <p>
-                My goal is to improve my skills and become a modern
-                educator who inspires others to explore technology.
-            </p>
-        </div>
+        <p>
+            My name is Firdavs. I am an IT teacher who is passionate
+            about technology, programming and education.
+            I enjoy learning new things and sharing my knowledge
+            with students.
+        </p>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills Section -->
     <section id="skills" class="section reveal">
-        <h2 class="section-title">My Skills</h2>
+        <h2>My Skills</h2>
 
         <div class="cards">
-
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Creating website structures.</p>
-            </div>
-
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Designing beautiful websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>Making websites interactive.</p>
-            </div>
-
-            <div class="card">
-                <h3>C++</h3>
-                <p>Learning programming and logic.</p>
-            </div>
-
-            <div class="card">
-                <h3>Microsoft Office</h3>
-                <p>Working with Word, Excel and PowerPoint.</p>
-            </div>
-
-            <div class="card">
-                <h3>Scratch</h3>
-                <p>Creating educational projects.</p>
-            </div>
-
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">C++</div>
+            <div class="card">Microsoft Office</div>
+            <div class="card">Scratch</div>
         </div>
     </section>
 
-    <!-- Hobbies -->
+    <!-- Hobbies Section -->
     <section id="hobbies" class="section reveal">
-        <h2 class="section-title">My Hobbies</h2>
+        <h2>My Hobbies</h2>
 
         <div class="cards">
-
-            <div class="card">
-                <h3>Technology</h3>
-                <p>Exploring new technologies and innovations.</p>
-            </div>
-
-            <div class="card">
-                <h3>Football</h3>
-                <p>Playing and watching football.</p>
-            </div>
-
-            <div class="card">
-                <h3>Learning</h3>
-                <p>Discovering new things every day.</p>
-            </div>
-
+            <div class="card">Learning Technology</div>
+            <div class="card">Programming</div>
+            <div class="card">Football</div>
+            <div class="card">Reading</div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="section reveal">
-        <h2 class="section-title">Contact Me</h2>
+        <h2>Contact Me</h2>
 
-        <div class="contact-content">
-            <p>Thank you for visiting my website!</p>
-
-            <p>
-                Email:
-                <a href="mailto:your-email@example.com">
-                    your-email@example.com
-                </a>
-            </p>
-        </div>
+        <p>Email: your-email@example.com</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Designed and built with HTML, CSS & JavaScript.</p>
-        <p>© 2026 Firdavs. All rights reserved.</p>
+        <p>© 2026 Firdavs. All Rights Reserved.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to top"
+        aria-label="Back to top">
+        ↑
+    </button>
 
     <!-- JavaScript -->
     <script>
 
-        // Typing Animation
+        // 1. Typing Animation
+
+        const typingText = document.getElementById("typing-text");
 
         const words = [
             "IT Teacher",
@@ -171,68 +115,53 @@
         ];
 
         let wordIndex = 0;
-        let letterIndex = 0;
+        let charIndex = 0;
         let deleting = false;
 
         function typeEffect() {
-
-            const element = document.getElementById("typing-text");
             const currentWord = words[wordIndex];
 
-            if (!deleting) {
-
-                element.textContent =
-                    currentWord.substring(0, letterIndex + 1);
-
-                letterIndex++;
-
-                if (letterIndex === currentWord.length) {
-                    deleting = true;
-                    setTimeout(typeEffect, 1500);
-                    return;
-                }
-
+            if (deleting) {
+                charIndex--;
             } else {
-
-                element.textContent =
-                    currentWord.substring(0, letterIndex - 1);
-
-                letterIndex--;
-
-                if (letterIndex === 0) {
-                    deleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                }
+                charIndex++;
             }
 
-            setTimeout(typeEffect, deleting ? 60 : 100);
+            typingText.textContent =
+                currentWord.substring(0, charIndex);
+
+            let speed = deleting ? 60 : 100;
+
+            if (!deleting && charIndex === currentWord.length) {
+                deleting = true;
+                speed = 1500;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                speed = 500;
+            }
+
+            setTimeout(typeEffect, speed);
         }
 
         typeEffect();
 
 
-        // Scroll Reveal Animation
+        // 2. Scroll Reveal Animation
 
-        const revealElements = document.querySelectorAll(".reveal");
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
         const revealObserver = new IntersectionObserver(
             (entries) => {
-
                 entries.forEach((entry) => {
-
                     if (entry.isIntersecting) {
-
                         entry.target.classList.add("active");
-
                         revealObserver.unobserve(entry.target);
                     }
-
                 });
-
             },
-            {
-                threshold: 0.10
-            }
+            { threshold: 0.10 }
         );
 
         revealElements.forEach((element) => {
@@ -240,60 +169,62 @@
         });
 
 
-// Dark / Light Mode Toggle
+        // 3. Dark / Light Mode
 
-const themeToggle = document.getElementById("theme-toggle");
+        const themeToggle =
+            document.getElementById("theme-toggle");
 
-// Check saved theme when website opens
-const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeToggle.textContent = "🌙 Dark Mode";
-} else {
-    themeToggle.textContent = "☀️ Light Mode";
-}
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+            themeToggle.textContent = "🌙 Dark Mode";
+        } else {
+            themeToggle.textContent = "☀️ Light Mode";
+        }
 
-// Change theme when button is clicked
-themeToggle.addEventListener("click", function () {
+        themeToggle.addEventListener("click", function () {
 
-    document.body.classList.toggle("light-mode");
+            document.body.classList.toggle("light-mode");
 
-    const isLightMode =
-        document.body.classList.contains("light-mode");
+            const isLightMode =
+                document.body.classList.contains("light-mode");
 
-    if (isLightMode) {
-        localStorage.setItem("theme", "light");
-        themeToggle.textContent = "🌙 Dark Mode";
-    } else {
-        localStorage.setItem("theme", "dark");
-        themeToggle.textContent = "☀️ Light Mode";
-    }
-});
-// Back to Top Button
+            if (isLightMode) {
+                localStorage.setItem("theme", "light");
+                themeToggle.textContent = "🌙 Dark Mode";
+            } else {
+                localStorage.setItem("theme", "dark");
+                themeToggle.textContent = "☀️ Light Mode";
+            }
+        });
 
-const backToTop = document.getElementById("back-to-top");
 
-// Show button when scrolling down
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
-    }
-});
+        // 4. Back to Top Button
 
-// Scroll smoothly to the top
-backToTop.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+        const backToTop =
+            document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+
+        });
+
+        backToTop.addEventListener("click", function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
 
     </script>
-<button id="back-to-top" title="Back to top">
-    ↑
-</button>
+
 </body>
 </html>
