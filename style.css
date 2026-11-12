@@ -442,3 +442,44 @@ footer {
     }
 
 }
+
+/* Hamburger Menu */
+
+#menu-toggle {
+    display: none;
+    background: transparent;
+    color: var(--purple);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+
+@media screen and (max-width: 650px) {
+
+    nav {
+        position: relative;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background: var(--surface);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 8px;
+    }
+}
