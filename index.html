@@ -249,15 +249,36 @@
          CONTACT SECTION
     ========================== -->
 
-    <section id="contact" class="section reveal">
+   <section id="contact" class="section reveal">
+    <h2>Contact Me</h2>
+    <p>Feel free to send me a message!</p>
 
-        <h2>Contact Me</h2>
+    <form id="contact-form">
 
-        <p>
-            Email: your-email@example.com
-        </p>
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
 
-    </section>
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Write your message..."
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+</section>
 
 
     <!-- =========================
