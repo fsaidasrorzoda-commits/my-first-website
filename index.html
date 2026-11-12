@@ -1,158 +1,296 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Firdavs | Personal Portfolio</title>
+
+    <!-- Connect CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header>
-        
-<nav>
-    <h2 class="logo">Firdavs</h2>
 
-    <button id="menu-toggle" aria-label="Open menu"
-        aria-expanded="false">
-        ☰
-    </button>
+        <nav>
 
-    <ul id="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+            <h2 class="logo">Firdavs</h2>
 
-    <button id="theme-toggle" aria-label="Switch theme">
-        ☀️ Light Mode
-    </button>
-</nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="nav-links">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <!-- Dark / Light Mode -->
+            <button id="theme-toggle"
+                aria-label="Switch theme">
+                ☀️ Light Mode
+            </button>
+
+        </nav>
 
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <img src="profile.png" alt="Firdavs profile photo">
 
-        <h1>Hello, I'm <span>Firdavs</span></h1>
+    <!-- =========================
+         HOME SECTION
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <img src="profile.png"
+            alt="Firdavs profile photo">
+
+        <h1>
+            Hello, I'm <span>Firdavs</span>
+        </h1>
 
         <h2>
             <span id="typing-text"></span>
             <span class="cursor">|</span>
         </h2>
 
-        <p>Welcome to my personal website!</p>
-        <a href="#about" class="btn">Learn More</a>
+        <p>
+            Welcome to my personal website!
+        </p>
+
+        <a href="#about" class="btn">
+            Learn More
+        </a>
+
     </section>
 
-    <!-- About Section -->
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
     <section id="about" class="section reveal">
+
         <h2>About Me</h2>
 
         <p>
-            My name is Firdavs. I am an IT teacher who is passionate
-            about technology, programming and education.
-            I enjoy learning new things and sharing my knowledge
-            with students.
+            My name is Firdavs. I am an IT teacher
+            who is passionate about technology,
+            programming and education.
+
+            I enjoy learning new things and
+            sharing my knowledge with students.
         </p>
+
     </section>
 
-    <!-- Skills Section -->
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+
     <section id="skills" class="section reveal">
+
         <h2>My Skills</h2>
 
         <div class="cards">
-            <div class="card">HTML</div>
-            <div class="card">CSS</div>
-            <div class="card">JavaScript</div>
-            <div class="card">C++</div>
-            <div class="card">Microsoft Office</div>
-            <div class="card">Scratch</div>
+
+            <div class="card">
+                HTML
+            </div>
+
+            <div class="card">
+                CSS
+            </div>
+
+            <div class="card">
+                JavaScript
+            </div>
+
+            <div class="card">
+                C++
+            </div>
+
+            <div class="card">
+                Microsoft Office
+            </div>
+
+            <div class="card">
+                Scratch
+            </div>
+
         </div>
+
     </section>
-    
-<!-- Projects Section -->
-<section id="projects" class="section reveal">
 
-    <h2>My Projects</h2>
 
-    <p>Here are some projects I have worked on.</p>
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
 
-    <div class="cards">
+    <section id="projects" class="section reveal">
 
-        <div class="card project-card">
-            <h3>My First Website</h3>
-            <p>
-                My personal portfolio created using HTML and CSS.
-            </p>
-            <span>HTML | CSS | JavaScript</span>
+        <h2>My Projects</h2>
+
+        <p>
+            Here are some projects I have worked on.
+        </p>
+
+        <div class="cards">
+
+            <div class="card project-card">
+
+                <h3>My First Website</h3>
+
+                <p>
+                    My personal portfolio created
+                    using HTML, CSS and JavaScript.
+                </p>
+
+                <span>
+                    HTML | CSS | JavaScript
+                </span>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>C++ Programming</h3>
+
+                <p>
+                    Practice programs and exercises
+                    using C++.
+                </p>
+
+                <span>
+                    C++ | Programming
+                </span>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>ICT Education</h3>
+
+                <p>
+                    Educational materials and digital
+                    resources for my students.
+                </p>
+
+                <span>
+                    ICT | Education
+                </span>
+
+            </div>
+
         </div>
 
-        <div class="card project-card">
-            <h3>C++ Programming</h3>
-            <p>
-                Practice programs and exercises using C++.
-            </p>
-            <span>C++ | Programming</span>
-        </div>
-
-        <div class="card project-card">
-            <h3>ICT Education</h3>
-            <p>
-                Educational materials and digital resources
-                for my students.
-            </p>
-            <span>ICT | Education</span>
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-    <!-- Hobbies Section -->
+    <!-- =========================
+         HOBBIES SECTION
+    ========================== -->
+
     <section id="hobbies" class="section reveal">
+
         <h2>My Hobbies</h2>
 
         <div class="cards">
-            <div class="card">Learning Technology</div>
-            <div class="card">Programming</div>
-            <div class="card">Football</div>
-            <div class="card">Reading</div>
+
+            <div class="card">
+                Learning Technology
+            </div>
+
+            <div class="card">
+                Programming
+            </div>
+
+            <div class="card">
+                Football
+            </div>
+
+            <div class="card">
+                Reading
+            </div>
+
         </div>
+
     </section>
 
-    <!-- Contact Section -->
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
     <section id="contact" class="section reveal">
+
         <h2>Contact Me</h2>
 
-        <p>Email: your-email@example.com</p>
+        <p>
+            Email: your-email@example.com
+        </p>
+
     </section>
 
-    <!-- Footer -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>© 2026 Firdavs. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Firdavs. All Rights Reserved.
+        </p>
+
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Back to top"
+
+    <!-- =========================
+         BACK TO TOP BUTTON
+    ========================== -->
+
+    <button id="back-to-top"
+        title="Back to top"
         aria-label="Back to top">
+
         ↑
+
     </button>
 
-    <!-- JavaScript -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script>
 
-        // 1. Typing Animation
 
-        const typingText = document.getElementById("typing-text");
+        // 1. TYPING ANIMATION
+
+        const typingText =
+            document.getElementById("typing-text");
 
         const words = [
             "IT Teacher",
@@ -166,6 +304,7 @@
         let deleting = false;
 
         function typeEffect() {
+
             const currentWord = words[wordIndex];
 
             if (deleting) {
@@ -180,55 +319,83 @@
             let speed = deleting ? 60 : 100;
 
             if (!deleting && charIndex === currentWord.length) {
+
                 deleting = true;
                 speed = 1500;
+
             } else if (deleting && charIndex === 0) {
+
                 deleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
+
+                wordIndex =
+                    (wordIndex + 1) % words.length;
+
                 speed = 500;
+
             }
 
             setTimeout(typeEffect, speed);
+
         }
 
         typeEffect();
 
 
-        // 2. Scroll Reveal Animation
+        // 2. SCROLL REVEAL ANIMATION
 
         const revealElements =
             document.querySelectorAll(".reveal");
 
-        const revealObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.10 }
-        );
+        const revealObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("active");
+
+                            revealObserver.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                { threshold: 0.10 }
+
+            );
 
         revealElements.forEach((element) => {
+
             revealObserver.observe(element);
+
         });
 
 
-        // 3. Dark / Light Mode
+        // 3. DARK / LIGHT MODE
 
         const themeToggle =
             document.getElementById("theme-toggle");
 
-        const savedTheme = localStorage.getItem("theme");
+        const savedTheme =
+            localStorage.getItem("theme");
 
         if (savedTheme === "light") {
+
             document.body.classList.add("light-mode");
+
             themeToggle.textContent = "🌙 Dark Mode";
+
         } else {
+
             themeToggle.textContent = "☀️ Light Mode";
+
         }
+
 
         themeToggle.addEventListener("click", function () {
 
@@ -238,16 +405,23 @@
                 document.body.classList.contains("light-mode");
 
             if (isLightMode) {
+
                 localStorage.setItem("theme", "light");
+
                 themeToggle.textContent = "🌙 Dark Mode";
+
             } else {
+
                 localStorage.setItem("theme", "dark");
+
                 themeToggle.textContent = "☀️ Light Mode";
+
             }
+
         });
 
 
-        // 4. Back to Top Button
+        // 4. BACK TO TOP BUTTON
 
         const backToTop =
             document.getElementById("back-to-top");
@@ -255,56 +429,88 @@
         window.addEventListener("scroll", function () {
 
             if (window.scrollY > 300) {
+
                 backToTop.style.display = "block";
+
             } else {
+
                 backToTop.style.display = "none";
+
             }
 
         });
 
+
         backToTop.addEventListener("click", function () {
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         });
 
-/* Hamburger Menu */
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+        // 5. MOBILE HAMBURGER MENU
 
-menuToggle.addEventListener("click", function () {
+        const menuToggle =
+            document.getElementById("menu-toggle");
 
-    navLinks.classList.toggle("show");
+        const navLinks =
+            document.getElementById("nav-links");
 
-    const isOpen = navLinks.classList.contains("show");
 
-    menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuToggle.addEventListener("click", function () {
 
-    menuToggle.setAttribute("aria-expanded", isOpen);
+            navLinks.classList.toggle("show");
 
-    menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close menu" : "Open menu"
-    );
+            const isOpen =
+                navLinks.classList.contains("show");
 
-});
+            menuToggle.textContent =
+                isOpen ? "✕" : "☰";
 
-// Close menu after clicking a navigation link
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
 
-document.querySelectorAll("#nav-links a").forEach(link => {
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
 
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("show");
-        menuToggle.textContent = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open menu");
-    });
+        });
 
-});
+
+        // Close menu after clicking a link
+
+        document.querySelectorAll("#nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("show");
+
+                    menuToggle.textContent = "☰";
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open menu"
+                    );
+
+                });
+
+            });
+
 
     </script>
 
