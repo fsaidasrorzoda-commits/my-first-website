@@ -363,4 +363,23 @@ header,
 footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: 0.3s;
+}
 
+#back-to-top:hover {
+    transform: translateY(-5px);
+}
