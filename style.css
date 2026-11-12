@@ -344,3 +344,23 @@ footer {
     transform: translateY(-3px);
     opacity: 0.85;
 }
+
+/* Light Mode Theme */
+
+body.light-mode {
+    --background: #f5f5fa;
+    --surface: #ffffff;
+    --white: #222222;
+    --gray: #555566;
+    --purple: #7c3aed;
+}
+
+/* Smooth Theme Transition */
+
+body,
+header,
+.card,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
