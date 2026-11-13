@@ -5,283 +5,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO DESCRIPTION -->
-    <meta name="description" content="Explore Firdavs's personal portfolio. Discover his work as an IT teacher, programming projects, technical skills and passion for technology and education.">
+    <title>FirdavsCode | Learn Programming for Free</title>
+    <meta name="description" content="Learn HTML, CSS, JavaScript, Python, C++ and SQL with beginner-friendly programming tutorials, examples and exercises.">
+    <meta name="keywords" content="learn programming, HTML tutorial, CSS tutorial, JavaScript, Python, C++, programming lessons">
 
-    <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-    <meta name="google-site-verification" content="FtFsTsc_7C9yAWbjMAL2BexyVovFgvtkD83gwXV6ib0" />
-
-    <title>Firdavs | IT Teacher, Programmer & Web Developer</title>
+    <meta name="author" content="Firdavs">
+    <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header>
-        <nav>
-            <h1 class="logo">Firdavs</h1>
+    <nav class="navbar">
+        <a href="#" class="logo">Firdavs<span>Code</span></a>
 
-            <button id="menu-toggle"
-                    aria-label="Open menu"
-                    aria-expanded="false">
-                ☰
-            </button>
+        <div class="nav-links">
+            <a href="#home" data-en="Home" data-ru="Главная" data-tj="Асосӣ">Home</a>
+            <a href="#courses" data-en="Tutorials" data-ru="Уроки" data-tj="Дарсҳо">Tutorials</a>
+            <a href="#practice" data-en="Practice" data-ru="Практика" data-tj="Машқ">Practice</a>
+            <a href="#about" data-en="About" data-ru="О нас" data-tj="Дар бораи мо">About</a>
+        </div>
 
-            <ul id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <select id="language" aria-label="Choose language">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="tj">Тоҷикӣ</option>
+        </select>
+    </nav>
 
-            <button id="theme-toggle" aria-label="Switch theme">
-                ☀️ Light Mode
-            </button>
-        </nav>
-    </header>
-
-    <!-- HOME SECTION -->
-    <section id="home" class="hero">
+    <header class="hero" id="home">
         <div class="hero-content">
-
-            <h1>Hello, I'm Firdavs</h1>
-
-            <h2>
-                <span id="typing-text"></span>
-                <span class="cursor">|</span>
-            </h2>
-
-            <p>
-                Welcome to my personal portfolio!
-                I love technology, programming and education.
+            <p class="eyebrow"
+               data-en="YOUR PROGRAMMING JOURNEY STARTS HERE"
+               data-ru="ТВОЙ ПУТЬ В ПРОГРАММИРОВАНИЕ НАЧИНАЕТСЯ ЗДЕСЬ"
+               data-tj="САФАРИ ШУМО БА ҶАҲОНИ БАРНОМАСОЗӢ АЗ ИН ҶО ОҒОЗ МЕШАВАД">
+                YOUR PROGRAMMING JOURNEY STARTS HERE
             </p>
 
-            <a href="#about" class="btn">Discover More</a>
+            <h1 data-en="Learn to code. Build your future."
+                data-ru="Учись программировать. Создавай своё будущее."
+                data-tj="Барномасозиро омӯз. Ояндаи худро соз.">
+                Learn to code. Build your future.
+            </h1>
 
-        </div>
+            <p class="hero-description"
+               data-en="Learn programming step by step with simple explanations, practical examples and exercises. Start from zero and develop real skills."
+               data-ru="Изучай программирование шаг за шагом с простыми объяснениями, примерами и упражнениями. Начни с нуля и развивай настоящие навыки."
+               data-tj="Барномасозиро қадам ба қадам бо шарҳҳои одӣ, мисолҳо ва машқҳо омӯзед. Аз сифр оғоз кунед ва малакаҳои воқеӣ пайдо кунед.">
+                Learn programming step by step with simple explanations,
+                practical examples and exercises. Start from zero and
+                develop real skills.
+            </p>
 
-        <img src="profile.png"
-             alt="Portrait of Firdavs, IT teacher and programmer">
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-
-        <h2>About Me</h2>
-
-        <p>
-            My name is Firdavs. I am an IT teacher who is passionate
-            about technology, programming and education.
-
-            I enjoy learning new technologies, developing websites
-            and helping students improve their digital skills.
-        </p>
-
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section">
-
-        <h2>My Skills</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Creating website structures.</p>
-            </div>
-
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Designing beautiful websites.</p>
-            </div>
-
-            <div class="card">
-                <h3>JavaScript</h3>
-                <p>Making websites interactive.</p>
-            </div>
-
-            <div class="card">
-                <h3>C++</h3>
-                <p>Learning programming and logic.</p>
-            </div>
-
-            <div class="card">
-                <h3>Microsoft Office</h3>
-                <p>Working with digital documents.</p>
-            </div>
-
-            <div class="card">
-                <h3>Scratch</h3>
-                <p>Creating beginner programming projects.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-
-        <h2>My Projects</h2>
-
-        <p>Here are some projects I have worked on.</p>
-
-        <div class="cards">
-
-            <div class="card project-card">
-
-                <h3>My First Website</h3>
-
-                <p>
-                    My personal portfolio created using
-                    HTML, CSS and JavaScript.
-                </p>
-
-                <span>HTML | CSS | JavaScript</span>
-
-                <a class="project-link"
-                   href="https://github.com/fsaidasrorzoda-commits/my-first-website"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    View Source Code →
+            <div class="hero-buttons">
+                <a href="#courses" class="button primary"
+                   data-en="Explore Tutorials"
+                   data-ru="Смотреть уроки"
+                   data-tj="Омӯзиши дарсҳо">
+                    Explore Tutorials
                 </a>
 
+                <a href="#practice" class="button secondary"
+                   data-en="Start Practicing"
+                   data-ru="Начать практику"
+                   data-tj="Машқро оғоз кун">
+                    Start Practicing
+                </a>
             </div>
 
-            <div class="card project-card">
-
-                <h3>C++ Programming</h3>
-
-                <p>
-                    Practice programs and exercises using C++.
-                </p>
-
-                <span>C++ | Programming</span>
-
-            </div>
-
-            <div class="card project-card">
-
-                <h3>ICT Education</h3>
-
-                <p>
-                    Educational materials and digital resources
-                    for my students.
-                </p>
-
-                <span>ICT | Education</span>
-
-            </div>
-
+            <p class="free-note"
+               data-en="Free learning resources for everyone."
+               data-ru="Бесплатные материалы для всех."
+               data-tj="Маводи омӯзишии ройгон барои ҳама.">
+                Free learning resources for everyone.
+            </p>
         </div>
 
-    </section>
-
-    <!-- HOBBIES SECTION -->
-    <section id="hobbies" class="section">
-
-        <h2>My Hobbies</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Football</h3>
-                <p>I enjoy playing and watching football.</p>
+        <div class="code-card">
+            <div class="code-top">
+                <span></span><span></span><span></span>
+                <small>hello_world.py</small>
             </div>
+            <pre><code><span class="code-purple">print</span>(<span class="code-green">"Hello, World!"</span>)
 
-            <div class="card">
-                <h3>Technology</h3>
-                <p>I love exploring new technologies.</p>
-            </div>
+<span class="code-comment"># Your journey starts today</span>
 
-            <div class="card">
-                <h3>Learning</h3>
-                <p>I enjoy learning new skills and ideas.</p>
-            </div>
-
+<span class="code-purple">print</span>(<span class="code-green">"Let's learn coding!"</span>)</code></pre>
         </div>
+    </header>
 
-    </section>
+    <main>
+        <section class="section" id="courses">
+            <div class="section-heading">
+                <p class="eyebrow">LEARN SOMETHING NEW</p>
+                <h2 data-en="Explore Programming Tutorials"
+                    data-ru="Изучай программирование"
+                    data-tj="Дарсҳои барномасозиро омӯз">
+                    Explore Programming Tutorials
+                </h2>
+                <p data-en="Choose a language and begin your learning journey."
+                   data-ru="Выбери язык и начни своё обучение."
+                   data-tj="Забонро интихоб кунед ва омӯзишро оғоз намоед.">
+                    Choose a language and begin your learning journey.
+                </p>
+            </div>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
+            <div class="course-grid">
+                <article class="course-card html">
+                    <div class="course-icon">5</div>
+                    <h3>HTML</h3>
+                    <p>Create the structure of websites and web pages.</p>
+                    <a href="#practice">Explore HTML →</a>
+                    <span class="level">Beginner</span>
+                </article>
 
-        <h2>Contact Me</h2>
+                <article class="course-card css">
+                    <div class="course-icon">#</div>
+                    <h3>CSS</h3>
+                    <p>Design beautiful websites with colors and layouts.</p>
+                    <a href="#practice">Explore CSS →</a>
+                    <span class="level">Beginner</span>
+                </article>
 
-        <p>
-            Have a question or an idea?
-            Feel free to send me a message!
-        </p>
+                <article class="course-card javascript">
+                    <div class="course-icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>Make websites interactive and dynamic.</p>
+                    <a href="#practice">Explore JavaScript →</a>
+                    <span class="level">Beginner</span>
+                </article>
 
-        <form
-            id="contact-form"
-            action="https://formsubmit.co/saidovfirdavs244@gmail.com"
-            method="POST"
-        >
+                <article class="course-card python">
+                    <div class="course-icon">Py</div>
+                    <h3>Python</h3>
+                    <p>Learn programming, logic and automation.</p>
+                    <a href="#practice">Explore Python →</a>
+                    <span class="level">Beginner</span>
+                </article>
 
-            <!-- EMAIL SETTINGS -->
-            <input type="hidden"
-                   name="_subject"
-                   value="New message from Firdavs Portfolio">
+                <article class="course-card cpp">
+                    <div class="course-icon">C++</div>
+                    <h3>C++</h3>
+                    <p>Understand algorithms and problem solving.</p>
+                    <a href="#practice">Explore C++ →</a>
+                    <span class="level">Beginner</span>
+                </article>
 
-            <input type="hidden"
-                   name="_template"
-                   value="table">
+                <article class="course-card sql">
+                    <div class="course-icon">DB</div>
+                    <h3>SQL</h3>
+                    <p>Learn how to work with databases.</p>
+                    <a href="#practice">Explore SQL →</a>
+                    <span class="level">Beginner</span>
+                </article>
+            </div>
+        </section>
 
-            <!-- VISITOR NAME -->
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-            >
+        <section class="practice-section" id="practice">
+            <div>
+                <p class="eyebrow">LEARN BY DOING</p>
+                <h2>Practice makes you a programmer.</h2>
+                <p>
+                    Reading is important, but writing code is how
+                    you develop real programming skills.
+                    Our interactive coding practice area is coming soon.
+                </p>
+                <span class="coming-soon">COMING SOON</span>
+            </div>
 
-            <!-- VISITOR EMAIL -->
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-            >
+            <div class="practice-preview">
+                <p>your_first_program.html</p>
+                <pre><code><span class="code-purple">&lt;h1&gt;</span>Hello, World!<span class="code-purple">&lt;/h1&gt;</span>
+<span class="code-purple">&lt;p&gt;</span>My first website<span class="code-purple">&lt;/p&gt;</span></code></pre>
+            </div>
+        </section>
 
-            <!-- VISITOR MESSAGE -->
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message..."
-                required
-            ></textarea>
+        <section class="section about-section" id="about">
+            <p class="eyebrow">ABOUT THE PLATFORM</p>
+            <h2>Technology education for everyone.</h2>
+            <p>
+                FirdavsCode is a programming education project
+                designed to make learning technology easier
+                through tutorials, examples and practical activities.
+                Our goal is to help learners build skills one step at a time.
+            </p>
+        </section>
+    </main>
 
-            <button type="submit">
-                Send Message →
-            </button>
-
-        </form>
-
-    </section>
-
-    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Firdavs. All Rights Reserved.</p>
-        <p>Designed and developed by Firdavs.</p>
+        <a href="#home" class="logo">Firdavs<span>Code</span></a>
+        <p>Learn. Practice. Create.</p>
+        <p>© 2026 FirdavsCode. Educational project.</p>
     </footer>
 
-    <!-- BACK TO TOP BUTTON -->
-    <button id="back-to-top"
-            title="Back to top"
-            aria-label="Back to top">
-        ↑
-    </button>
+    <script>
+        const languageSelector = document.getElementById("language");
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+        languageSelector.addEventListener("change", function () {
+            const language = this.value;
+
+            document.querySelectorAll("[data-" + language + "]")
+                .forEach(function (element) {
+                    element.textContent = element.getAttribute("data-" + language);
+                });
+
+            document.documentElement.lang = language;
+        });
+    </script>
 
 </body>
 </html>
