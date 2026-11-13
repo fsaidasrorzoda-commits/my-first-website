@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL for Beginners | ECOCODE</title><style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f4f7fb;color:#17233d;line-height:1.65}
+header{background:#101d35;padding:18px 7%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
+header a{color:white;text-decoration:none}header .logo{color:#35c5f0;font-size:24px;font-weight:bold}
+.hero{background:linear-gradient(120deg,#101d35,#174c78);color:white;padding:55px 7%}.hero h1{font-size:clamp(30px,5vw,46px);margin-bottom:10px}
+.hero p{max-width:700px;color:#e2edf7}main{max-width:950px;margin:35px auto;padding:0 20px}
+.lesson,.welcome,.practice{background:white;padding:24px;margin-bottom:20px;border-radius:13px;box-shadow:0 4px 16px #10213b0b}
+h2{color:#1764a0;margin-bottom:10px}pre{background:#101d35;color:#8ce5c6;padding:18px;border-radius:9px;overflow-x:auto;margin-top:14px;white-space:pre-wrap}
+.practice{background:#e5f5ff;border-left:5px solid #35c5f0}footer{background:#101d35;color:white;text-align:center;padding:25px;margin-top:45px}footer strong{color:#35c5f0}
+</style></head><body>
+<header><a class="logo" href="index.html">&lt;/&gt; ECOCODE</a><a href="index.html">← Back to all courses</a></header>
+<section class="hero"><h1>SQL for Beginners</h1><p>Learn to work with information stored in databases.</p></section>
+<main><section class="welcome"><h2>Welcome to this course</h2><p>SQL (Structured Query Language) is used to create, read and manage data in relational databases.</p><p>Work through the lessons in order. Study each example, then practise by changing the code.</p></section>
+<section class="lesson"><h2>Lesson 1: Create a table</h2><p>Read the example and try changing it yourself.</p><pre><code>CREATE TABLE students (\n  id INTEGER,\n  name TEXT,\n  age INTEGER\n);</code></pre></section><section class="lesson"><h2>Lesson 2: Insert data</h2><p>Read the example and try changing it yourself.</p><pre><code>INSERT INTO students (id, name, age)\nVALUES (1, &#x27;Ali&#x27;, 15);</code></pre></section><section class="lesson"><h2>Lesson 3: Read data</h2><p>Read the example and try changing it yourself.</p><pre><code>SELECT * FROM students;</code></pre></section><section class="lesson"><h2>Lesson 4: Filter results</h2><p>Read the example and try changing it yourself.</p><pre><code>SELECT name, age\nFROM students\nWHERE age &gt;= 15;</code></pre></section><section class="lesson"><h2>Lesson 5: Sort results</h2><p>Read the example and try changing it yourself.</p><pre><code>SELECT name, age\nFROM students\nORDER BY age DESC;</code></pre></section>
+<section class="practice"><h2>Practice Challenge</h2><p><strong>Your task:</strong> Create a small project using what you learned.</p><ol><li>Write one example yourself.</li><li>Change at least two values or elements.</li><li>Try one new idea of your own.</li><li>Save your work and review the result.</li></ol></section></main>
+<footer>© 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.</footer></body></html>
