@@ -25,7 +25,24 @@ nav{display:flex;gap:22px}nav a{color:white;text-decoration:none;font-weight:bol
 .about{background:#e8f5fc;border-radius:16px;padding:30px}.about p{max-width:850px;margin:auto}
 footer{background:var(--navy);color:#dbe6f2;text-align:center;padding:28px;margin-top:60px}footer strong{color:var(--cyan)}
 @media(max-width:600px){header{justify-content:center}nav{gap:14px}.hero{padding:60px 20px}}
-</style></head>
+#languageSelector {
+    padding: 9px 12px;
+    border-radius: 7px;
+    border: 1px solid #35c5f0;
+    background: white;
+    color: #101d35;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:600px) {
+    #languageSelector {
+        margin-top: 8px;
+    }
+}
+</style>
+    
+</head>
 <body>
 <header>
     <a class="logo" href="index.html">&lt;/&gt; ECOCODE</a>
@@ -57,4 +74,54 @@ footer{background:var(--navy);color:#dbe6f2;text-align:center;padding:28px;margi
 <section class="section" id="about"><div class="about"><div class="heading"><h2>About ECOCODE</h2></div>
 <p><strong>ECOCODE</strong> is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik. <strong>Learn. Practice. Create.</strong></p></div></section>
 </main><footer>© 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.</footer>
-</body></html>
+<script>
+const translations = {
+    en: {
+        heroTitle: "Learn to code.<br>Build your future.",
+        heroText: "Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.",
+        explore: "Explore Courses",
+        courseTitle: "Explore Our Courses",
+        courseSubtitle: "Choose a course and take your first step into programming.",
+        aboutTitle: "About ECOCODE",
+        aboutText: "ECOCODE is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik."
+    },
+    ru: {
+        heroTitle: "Учись программировать.<br>Создай своё будущее.",
+        heroText: "Начни изучать программирование с понятными уроками, практическими примерами и заданиями для начинающих. Учись в своём темпе.",
+        explore: "Изучить курсы",
+        courseTitle: "Наши курсы",
+        courseSubtitle: "Выбери курс и сделай первый шаг в программировании.",
+        aboutTitle: "О ECOCODE",
+        aboutText: "ECOCODE — образовательная платформа, созданная для того, чтобы сделать программирование доступным каждому. Наша цель — предоставлять понятные объяснения, полезные примеры и практические задания на английском, русском и таджикском языках."
+    },
+    tj: {
+        heroTitle: "Барномасозиро омӯз.<br>Ояндаи худро соз.",
+        heroText: "Омӯзиши барномасозиро бо дарсҳои фаҳмо, мисолҳои амалӣ ва супоришҳо барои навомӯзон оғоз кун. Бо суръати худ омӯз.",
+        explore: "Дидани курсҳо",
+        courseTitle: "Курсҳои мо",
+        courseSubtitle: "Курсро интихоб кун ва қадами аввалини худро дар барномасозӣ гузор.",
+        aboutTitle: "Дар бораи ECOCODE",
+        aboutText: "ECOCODE платформаи омӯзишӣ мебошад, ки барои дастрас кардани барномасозӣ ба ҳама сохта шудааст. Ҳадафи мо пешниҳод кардани шарҳҳои фаҳмо, мисолҳои муфид ва машқҳои амалӣ бо забонҳои англисӣ, русӣ ва тоҷикӣ мебошад."
+    }
+};
+
+function changeLanguage(lang) {
+    const t = translations[lang];
+
+    document.querySelector(".hero h1").innerHTML = t.heroTitle;
+    document.querySelector(".hero p").textContent = t.heroText;
+    document.querySelector(".hero .btn").textContent = t.explore;
+    document.querySelector("#courses h2").textContent = t.courseTitle;
+    document.querySelector("#courses .heading p").textContent = t.courseSubtitle;
+    document.querySelector("#about h2").textContent = t.aboutTitle;
+    document.querySelector("#about .about p").innerHTML =
+        "<strong>ECOCODE</strong> " + t.aboutText.replace("ECOCODE", "") +
+        " <strong>Learn. Practice. Create.</strong>";
+
+    document.querySelectorAll("[data-" + lang + "]").forEach(element => {
+        element.textContent = element.getAttribute("data-" + lang);
+    });
+}
+</script>
+</body>
+</html>
