@@ -1,1 +1,198 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML for Beginners | ECOCODE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #17233d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101d35;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #35c5f0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101d35, #174c78);
+            color: white;
+            padding: 65px 8%;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0000000d;
+        }
+
+        .lesson h2 {
+            color: #1764a0;
+            margin-bottom: 12px;
+        }
+
+        pre {
+            background: #101d35;
+            color: #72e3bd;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .practice {
+            background: #e5f5ff;
+            border-left: 5px solid #159bd2;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #101d35;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        button {
+            background: #20b9e8;
+            color: #101d35;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>&lt;/&gt; ECOCODE</h2>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<section class="hero">
+    <h1>HTML for Beginners</h1>
+    <p>Start your web development journey. Learn how to create websites using HTML, step by step.</p>
+    <button onclick="document.getElementById('lesson1').scrollIntoView({behavior:'smooth'})">
+        Start Learning
+    </button>
+</section>
+
+<main class="container">
+
+    <section class="lesson" id="lesson1">
+        <h2>Lesson 1: What is HTML?</h2>
+        <p>HTML stands for HyperText Markup Language.</p>
+        <p>It is the standard language used to structure content on web pages.</p>
+        <p>HTML helps us create headings, paragraphs, images, links and more.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>Lesson 2: Your First HTML Page</h2>
+        <p>Every basic HTML page has a structure.</p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to ECOCODE!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section class="lesson">
+        <h2>Lesson 3: HTML Headings</h2>
+        <p>HTML has six heading levels, from h1 to h6.</p>
+
+        <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Second Heading&lt;/h2&gt;
+&lt;h3&gt;Third Heading&lt;/h3&gt;</code></pre>
+    </section>
+
+    <section class="lesson">
+        <h2>Lesson 4: HTML Paragraphs</h2>
+        <p>Use the p tag to write paragraphs.</p>
+
+        <pre><code>&lt;p&gt;I am learning HTML with ECOCODE.&lt;/p&gt;</code></pre>
+    </section>
+
+    <section class="lesson">
+        <h2>Lesson 5: HTML Links</h2>
+        <p>Use the a tag to create links to other pages.</p>
+
+        <pre><code>&lt;a href="https://www.google.com"&gt;
+    Visit Google
+&lt;/a&gt;</code></pre>
+    </section>
+
+    <section class="lesson">
+        <h2>Practice Challenge</h2>
+        <div class="practice">
+            <p><strong>Your task:</strong> Create a simple personal webpage.</p>
+            <ol>
+                <li>Add your name as a main heading.</li>
+                <li>Write a paragraph about yourself.</li>
+                <li>Add a second heading called My Hobbies.</li>
+                <li>Create a link to your favourite website.</li>
+            </ol>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ECOCODE | Learn. Practice. Create.</p>
+</footer>
+
+</body>
+</html>
