@@ -27,7 +27,21 @@ footer{background:var(--navy);color:#dbe6f2;text-align:center;padding:28px;margi
 @media(max-width:600px){header{justify-content:center}nav{gap:14px}.hero{padding:60px 20px}}
 </style></head>
 <body>
-<header><a class="logo" href="index.html">&lt;/&gt; ECOCODE</a><nav><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a></nav></header>
+<header>
+    <a class="logo" href="index.html">&lt;/&gt; ECOCODE</a>
+
+    <nav>
+        <a href="#home" data-en="Home" data-ru="Главная" data-tj="Асосӣ">Home</a>
+        <a href="#courses" data-en="Courses" data-ru="Курсы" data-tj="Курсҳо">Courses</a>
+        <a href="#about" data-en="About" data-ru="О нас" data-tj="Дар бораи мо">About</a>
+    </nav>
+
+    <select id="languageSelector" onchange="changeLanguage(this.value)">
+        <option value="en">🇬🇧 English</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="tj">🇹🇯 Тоҷикӣ</option>
+    </select>
+</header>
 <main>
 <section class="hero" id="home"><small>LEARN. PRACTICE. CREATE.</small><h1>Learn to code.<br>Build your future.</h1>
 <p>Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.</p><a class="btn" href="#courses">Explore Courses</a></section>
