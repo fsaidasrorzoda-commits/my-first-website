@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fsaidasrorzoda-commits.github.io/my-first-website/sitemap.xml
 
