@@ -1,18 +1,352 @@
+
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML for Beginners | ECOCODE</title><style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:#f4f7fb;color:#17233d;line-height:1.65}
-header{background:#101d35;padding:18px 7%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
-header a{color:white;text-decoration:none}header .logo{color:#35c5f0;font-size:24px;font-weight:bold}
-.hero{background:linear-gradient(120deg,#101d35,#174c78);color:white;padding:55px 7%}.hero h1{font-size:clamp(30px,5vw,46px);margin-bottom:10px}
-.hero p{max-width:700px;color:#e2edf7}main{max-width:950px;margin:35px auto;padding:0 20px}
-.lesson,.welcome,.practice{background:white;padding:24px;margin-bottom:20px;border-radius:13px;box-shadow:0 4px 16px #10213b0b}
-h2{color:#1764a0;margin-bottom:10px}pre{background:#101d35;color:#8ce5c6;padding:18px;border-radius:9px;overflow-x:auto;margin-top:14px;white-space:pre-wrap}
-.practice{background:#e5f5ff;border-left:5px solid #35c5f0}footer{background:#101d35;color:white;text-align:center;padding:25px;margin-top:45px}footer strong{color:#35c5f0}
-</style></head><body>
-<header><a class="logo" href="index.html">&lt;/&gt; ECOCODE</a><a href="index.html">← Back to all courses</a></header>
-<section class="hero"><h1>HTML for Beginners</h1><p>Build the structure of web pages with HTML.</p></section>
-<main><section class="welcome"><h2>Welcome to this course</h2><p>HTML is the standard markup language used to structure content on web pages.</p><p>Work through the lessons in order. Study each example, then practise by changing the code.</p></section>
-<section class="lesson"><h2>Lesson 1: Your first HTML document</h2><p>Read the example and try changing it yourself.</p><pre><code>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;My First Page&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h1&gt;Hello, world!&lt;/h1&gt;\n  &lt;p&gt;Welcome to my page.&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;</code></pre></section><section class="lesson"><h2>Lesson 2: Headings and paragraphs</h2><p>Read the example and try changing it yourself.</p><pre><code>&lt;h1&gt;Main heading&lt;/h1&gt;\n&lt;h2&gt;Subheading&lt;/h2&gt;\n&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre></section><section class="lesson"><h2>Lesson 3: Links and images</h2><p>Read the example and try changing it yourself.</p><pre><code>&lt;a href=&quot;https://example.com&quot;&gt;Visit Example&lt;/a&gt;\n&lt;img src=&quot;photo.jpg&quot; alt=&quot;A description&quot;&gt;</code></pre></section><section class="lesson"><h2>Lesson 4: Lists</h2><p>Read the example and try changing it yourself.</p><pre><code>&lt;ul&gt;\n  &lt;li&gt;HTML&lt;/li&gt;\n  &lt;li&gt;CSS&lt;/li&gt;\n  &lt;li&gt;JavaScript&lt;/li&gt;\n&lt;/ul&gt;</code></pre></section><section class="lesson"><h2>Lesson 5: Forms</h2><p>Read the example and try changing it yourself.</p><pre><code>&lt;form&gt;\n  &lt;label for=&quot;name&quot;&gt;Your name:&lt;/label&gt;\n  &lt;input id=&quot;name&quot; type=&quot;text&quot;&gt;\n  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;\n&lt;/form&gt;</code></pre></section>
-<section class="practice"><h2>Practice Challenge</h2><p><strong>Your task:</strong> Create a small project using what you learned.</p><ol><li>Write one example yourself.</li><li>Change at least two values or elements.</li><li>Try one new idea of your own.</li><li>Save your work and review the result.</li></ol></section></main>
-<footer>© 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.</footer></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn HTML in English, Russian and Tajik with ECOCODE.">
+<title>HTML Course | ECOCODE</title>
+
+<style>
+:root {
+    --navy:#101d35;
+    --blue:#1764a0;
+    --cyan:#35c5f0;
+    --bg:#f4f7fb;
+    --ink:#17233d;
+    --muted:#607086;
+}
+
+* {box-sizing:border-box;margin:0;padding:0}
+
+body {
+    font-family:Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.7;
+}
+
+header {
+    background:var(--navy);
+    color:white;
+    padding:16px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.logo {
+    color:var(--cyan);
+    font-size:25px;
+    font-weight:800;
+    text-decoration:none;
+}
+
+nav {
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover {color:var(--cyan)}
+
+#languageSelector {
+    padding:9px 12px;
+    border-radius:7px;
+    border:1px solid var(--cyan);
+    background:white;
+    color:var(--navy);
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.hero {
+    background:linear-gradient(120deg,var(--navy),#174c78);
+    color:white;
+    padding:65px 7%;
+}
+
+.hero small {
+    color:#8ce5ff;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.hero h1 {
+    font-size:clamp(32px,5vw,48px);
+    margin:12px 0;
+}
+
+.hero p {
+    max-width:700px;
+    color:#e2edf7;
+}
+
+main {
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.welcome,.lesson,.practice {
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:13px;
+    box-shadow:0 4px 16px #10213b0b;
+}
+
+h2 {
+    color:var(--blue);
+    margin-bottom:12px;
+}
+
+.lesson h3 {
+    margin:12px 0 7px;
+}
+
+.lesson p,.welcome p {
+    margin-bottom:10px;
+}
+
+pre {
+    background:var(--navy);
+    color:#8ce5c6;
+    padding:20px;
+    border-radius:9px;
+    overflow-x:auto;
+    margin-top:15px;
+    white-space:pre;
+}
+
+.practice {
+    background:#e5f5ff;
+    border-left:5px solid var(--cyan);
+}
+
+.practice ol {
+    padding-left:25px;
+    margin-top:12px;
+}
+
+footer {
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:45px;
+}
+
+footer strong {color:var(--cyan)}
+
+@media(max-width:600px) {
+    header {justify-content:center}
+    nav {gap:12px;flex-wrap:wrap;justify-content:center}
+    .hero {padding:45px 22px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="index.html">&lt;/&gt; ECOCODE</a>
+
+    <nav>
+        <a href="index.html" data-en="Home" data-ru="Главная" data-tj="Асосӣ">Home</a>
+        <a href="index.html#courses" data-en="Courses" data-ru="Курсы" data-tj="Курсҳо">Courses</a>
+    </nav>
+
+    <select id="languageSelector" onchange="changeLanguage(this.value)">
+        <option value="en">🇬🇧 English</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="tj">🇹🇯 Тоҷикӣ</option>
+    </select>
+</header>
+
+<section class="hero">
+    <small>ECOCODE | LEARN. PRACTICE. CREATE.</small>
+    <h1 data-en="HTML for Beginners"
+        data-ru="HTML для начинающих"
+        data-tj="HTML барои навомӯзон">HTML for Beginners</h1>
+
+    <p data-en="Build the structure of web pages with HTML."
+       data-ru="Создавай структуру веб-страниц с помощью HTML."
+       data-tj="Бо ёрии HTML сохтори саҳифаҳои вебро соз.">
+       Build the structure of web pages with HTML.
+    </p>
+</section>
+
+<main>
+
+<section class="welcome">
+    <h2 data-en="Welcome to this course"
+        data-ru="Добро пожаловать на курс"
+        data-tj="Ба ин курс хуш омадед">Welcome to this course</h2>
+
+    <p data-en="HTML is the standard markup language used to structure content on web pages."
+       data-ru="HTML — стандартный язык разметки, используемый для создания структуры веб-страниц."
+       data-tj="HTML забони стандартии нишонагузорӣ мебошад, ки барои сохтани сохтори саҳифаҳои веб истифода мешавад.">
+       HTML is the standard markup language used to structure content on web pages.
+    </p>
+
+    <p data-en="Work through the lessons in order. Study each example, then practise by changing the code."
+       data-ru="Изучай уроки по порядку. Рассматривай каждый пример и практикуйся, изменяя код."
+       data-tj="Дарсҳоро бо тартиб омӯз. Ҳар як мисолро дида баро ва бо тағйир додани рамз машқ кун.">
+       Work through the lessons in order. Study each example, then practise by changing the code.
+    </p>
+</section>
+
+<section class="lesson">
+    <h2 data-en="Lesson 1: Your first HTML document"
+        data-ru="Урок 1: Твой первый HTML-документ"
+        data-tj="Дарси 1: Аввалин ҳуҷҷати HTML">Lesson 1: Your first HTML document</h2>
+
+    <p data-en="An HTML document starts with a DOCTYPE declaration and contains HTML, head and body elements."
+       data-ru="HTML-документ начинается с объявления DOCTYPE и содержит элементы html, head и body."
+       data-tj="Ҳуҷҷати HTML бо эълони DOCTYPE оғоз мешавад ва унсурҳои html, head ва body-ро дар бар мегирад.">
+       An HTML document starts with a DOCTYPE declaration and contains HTML, head and body elements.
+    </p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;Welcome to my page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</section>
+
+<section class="lesson">
+    <h2 data-en="Lesson 2: Headings and paragraphs"
+        data-ru="Урок 2: Заголовки и абзацы"
+        data-tj="Дарси 2: Сарлавҳаҳо ва параграфҳо">Lesson 2: Headings and paragraphs</h2>
+
+    <p data-en="HTML provides six heading levels, from h1 to h6. Use the paragraph element p for ordinary text."
+       data-ru="HTML предоставляет шесть уровней заголовков — от h1 до h6. Для обычного текста используй элемент p."
+       data-tj="HTML шаш сатҳи сарлавҳа дорад: аз h1 то h6. Барои матни одӣ унсури p-ро истифода бар.">
+       HTML provides six heading levels, from h1 to h6. Use the paragraph element p for ordinary text.
+    </p>
+
+<pre><code>&lt;h1&gt;Main heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+</section>
+
+<section class="lesson">
+    <h2 data-en="Lesson 3: Links and images"
+        data-ru="Урок 3: Ссылки и изображения"
+        data-tj="Дарси 3: Пайвандҳо ва расмҳо">Lesson 3: Links and images</h2>
+
+    <p data-en="Use the a element to create links. Use img to display images. The alt attribute describes an image."
+       data-ru="Используй элемент a для создания ссылок, а img — для отображения изображений. Атрибут alt описывает изображение."
+       data-tj="Барои сохтани пайвандҳо унсури a ва барои намоиши расмҳо img-ро истифода бар. Атрибути alt расмро шарҳ медиҳад.">
+       Use the a element to create links. Use img to display images. The alt attribute describes an image.
+    </p>
+
+<pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+&lt;img src="photo.jpg" alt="A description"&gt;</code></pre>
+</section>
+
+<section class="lesson">
+    <h2 data-en="Lesson 4: Lists"
+        data-ru="Урок 4: Списки"
+        data-tj="Дарси 4: Рӯйхатҳо">Lesson 4: Lists</h2>
+
+    <p data-en="HTML supports ordered lists with ol and unordered lists with ul. Each list item uses li."
+       data-ru="HTML поддерживает нумерованные списки с помощью ol и маркированные списки с помощью ul. Каждый пункт создаётся с помощью li."
+       data-tj="HTML рӯйхатҳои рақамдорро бо ol ва рӯйхатҳои нишонадорро бо ul дастгирӣ мекунад. Ҳар як банди рӯйхат бо li сохта мешавад.">
+       HTML supports ordered lists with ol and unordered lists with ul. Each list item uses li.
+    </p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</section>
+
+<section class="lesson">
+    <h2 data-en="Lesson 5: Forms"
+        data-ru="Урок 5: Формы"
+        data-tj="Дарси 5: Формаҳо">Lesson 5: Forms</h2>
+
+    <p data-en="Forms collect information from users. You can use labels, input fields and buttons."
+       data-ru="Формы собирают информацию от пользователей. В них можно использовать подписи, поля ввода и кнопки."
+       data-tj="Формаҳо маълумотро аз истифодабарандагон ҷамъ мекунанд. Дар онҳо метавон нишонаҳо, майдонҳои воридкунӣ ва тугмаҳоро истифода бурд.">
+       Forms collect information from users. You can use labels, input fields and buttons.
+    </p>
+
+<pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Your name:&lt;/label&gt;
+  &lt;input id="name" type="text"&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<section class="practice">
+    <h2 data-en="Practice Challenge"
+        data-ru="Практическое задание"
+        data-tj="Супориши амалӣ">Practice Challenge</h2>
+
+    <p data-en="Your task: Create a small project using what you learned."
+       data-ru="Твоё задание: Создай небольшой проект, используя полученные знания."
+       data-tj="Супориши ту: Бо истифода аз донишҳои гирифтаат як лоиҳаи хурд соз.">
+       Your task: Create a small project using what you learned.
+    </p>
+
+    <ol>
+        <li data-en="Write one example yourself."
+            data-ru="Напиши один пример самостоятельно."
+            data-tj="Як мисолро мустақилона навис.">Write one example yourself.</li>
+
+        <li data-en="Change at least two values or elements."
+            data-ru="Измени как минимум два значения или элемента."
+            data-tj="Ақаллан ду қимат ё унсурро тағйир деҳ.">Change at least two values or elements.</li>
+
+        <li data-en="Try one new idea of your own."
+            data-ru="Попробуй реализовать одну собственную идею."
+            data-tj="Як фикри нави худро санҷ.">Try one new idea of your own.</li>
+
+        <li data-en="Save your work and review the result."
+            data-ru="Сохрани работу и проверь результат."
+            data-tj="Коратро нигоҳ дор ва натиҷаро санҷ.">Save your work and review the result.</li>
+    </ol>
+</section>
+
+</main>
+
+<footer>
+    © 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.
+</footer>
+
+<script>
+function changeLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-" + lang + "]").forEach(element => {
+        element.textContent = element.getAttribute("data-" + lang);
+    });
+
+    localStorage.setItem("ecocode-language", lang);
+}
+
+const savedLanguage = localStorage.getItem("ecocode-language") || "en";
+
+document.getElementById("languageSelector").value = savedLanguage;
+changeLanguage(savedLanguage);
+</script>
+
+</body>
+</html>
