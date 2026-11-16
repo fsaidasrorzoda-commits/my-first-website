@@ -1,138 +1,518 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta property="og:title" content="ECOCODE | Learn. Practice. Create.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta property="og:description"
-content="Learn HTML, CSS, JavaScript, Python, C++ and SQL with practical lessons and coding exercises.">
+    <title>ECOCODE | Learn. Practice. Create.</title>
 
-<meta property="og:type" content="website">
+    <!-- SEO -->
+    <meta name="description"
+        content="ECOCODE is a programming education platform. Learn HTML, CSS, JavaScript, Python, C++ and SQL with practical lessons.">
 
-<meta property="og:url"
-content="https://fsaidasrorzoda-commits.github.io/my-first-website/">
+    <meta name="author" content="Firdavs">
 
-<meta name="twitter:card" content="summary">
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ECOCODE — free programming lessons for everyone.">
-<title>ECOCODE | Learn. Practice. Create.</title>
-<style>
-:root{--navy:#101d35;--blue:#1764a0;--cyan:#35c5f0;--ink:#17233d;--muted:#607086;--bg:#f4f7fb}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-header{background:var(--navy);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.logo{font-size:25px;font-weight:800;color:var(--cyan);text-decoration:none}
-nav{display:flex;gap:22px}nav a{color:white;text-decoration:none;font-weight:bold}
-.hero{background:linear-gradient(120deg,#101d35,#174c78);color:white;text-align:center;padding:80px 7%}
-.hero small{color:#8ce5ff;font-weight:bold;letter-spacing:2px}.hero h1{font-size:clamp(36px,6vw,60px);line-height:1.12;margin:14px}
-.hero p{max-width:680px;margin:0 auto 25px;color:#e0eaf5;font-size:18px}
-.btn{display:inline-block;background:var(--cyan);color:var(--navy);padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold}
-.section{max-width:1120px;margin:55px auto;padding:0 22px}.heading{text-align:center;margin-bottom:28px}
-.heading h2{font-size:32px;color:var(--navy)}.heading p{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:20px}
-.course{background:white;border:1px solid #e4eaf2;border-radius:14px;padding:24px;box-shadow:0 5px 18px #10213b0a;display:flex;flex-direction:column;align-items:flex-start}
-.symbol{background:#e5f5ff;color:var(--blue);padding:10px 13px;border-radius:10px;font-weight:900;margin-bottom:14px}
-.course h3{font-size:22px;margin-bottom:7px}.course p{color:var(--muted);margin-bottom:18px;flex:1}
-.course a{color:#126da5;text-decoration:none;font-weight:bold}.course a:hover{text-decoration:underline}
-.about{background:#e8f5fc;border-radius:16px;padding:30px}.about p{max-width:850px;margin:auto}
-footer{background:var(--navy);color:#dbe6f2;text-align:center;padding:28px;margin-top:60px}footer strong{color:var(--cyan)}
-@media(max-width:600px){header{justify-content:center}nav{gap:14px}.hero{padding:60px 20px}}
-#languageSelector {
-    padding: 9px 12px;
-    border-radius: 7px;
-    border: 1px solid #35c5f0;
-    background: white;
-    color: #101d35;
-    font-weight: bold;
-    cursor: pointer;
-}
+    <!-- Social Media Preview -->
+    <meta property="og:title"
+        content="ECOCODE | Learn. Practice. Create.">
 
-@media(max-width:600px) {
-    #languageSelector {
-        margin-top: 8px;
-    }
-}
-</style>
-    
+    <meta property="og:description"
+        content="Learn HTML, CSS, JavaScript, Python, C++ and SQL with practical lessons and coding exercises.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+        content="https://fsaidasrorzoda-commits.github.io/my-first-website/">
+
+    <meta property="og:image"
+        content="https://fsaidasrorzoda-commits.github.io/my-first-website/profile.png">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title"
+        content="ECOCODE | Learn. Practice. Create.">
+
+    <meta name="twitter:description"
+        content="Your programming journey starts here. Learn. Practice. Create.">
+
+    <meta name="twitter:image"
+        content="https://fsaidasrorzoda-commits.github.io/my-first-website/profile.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="profile.png">
+
+    <style>
+        :root {
+            --navy: #101d35;
+            --blue: #1764a0;
+            --cyan: #35c5f0;
+            --ink: #17233d;
+            --muted: #607086;
+            --bg: #f4f7fb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--cyan);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #101d35, #174c78);
+            color: white;
+            text-align: center;
+            padding: 80px 7%;
+        }
+
+        .hero small {
+            color: #8ce5ff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 60px);
+            line-height: 1.12;
+            margin: 14px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 25px;
+            color: #e0eaf5;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .section {
+            max-width: 1120px;
+            margin: 55px auto;
+            padding: 0 22px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .heading h2 {
+            font-size: 32px;
+            color: var(--navy);
+        }
+
+        .heading p {
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(245px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .course {
+            background: white;
+            border: 1px solid #e4eaf2;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 5px 18px #10213b0a;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .symbol {
+            background: #e5f5ff;
+            color: var(--blue);
+            padding: 10px 13px;
+            border-radius: 10px;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .course h3 {
+            font-size: 22px;
+            margin-bottom: 7px;
+        }
+
+        .course p {
+            color: var(--muted);
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        .course a {
+            color: #126da5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .course a:hover {
+            text-decoration: underline;
+        }
+
+        .about {
+            background: #e8f5fc;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        footer {
+            background: var(--navy);
+            color: #dbe6f2;
+            text-align: center;
+            padding: 28px;
+            margin-top: 60px;
+        }
+
+        footer strong {
+            color: var(--cyan);
+        }
+
+        #languageSelector {
+            padding: 9px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--cyan);
+            background: white;
+            color: var(--navy);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            #languageSelector {
+                margin-top: 8px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-    <a class="logo" href="index.html">&lt;/&gt; ECOCODE</a>
 
-    <nav>
-        <a href="#home" data-en="Home" data-ru="Главная" data-tj="Асосӣ">Home</a>
-        <a href="#courses" data-en="Courses" data-ru="Курсы" data-tj="Курсҳо">Courses</a>
-        <a href="#about" data-en="About" data-ru="О нас" data-tj="Дар бораи мо">About</a>
-    </nav>
+    <!-- HEADER -->
+    <header>
 
-    <select id="languageSelector" onchange="changeLanguage(this.value)">
-        <option value="en">🇬🇧 English</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="tj">🇹🇯 Тоҷикӣ</option>
-    </select>
-</header>
-<main>
-<section class="hero" id="home"><small>LEARN. PRACTICE. CREATE.</small><h1>Learn to code.<br>Build your future.</h1>
-<p>Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.</p><a class="btn" href="#courses">Explore Courses</a></section>
-<section class="section" id="courses"><div class="heading"><h2>Explore Our Courses</h2><p>Choose a course and take your first step into programming.</p></div>
-<div class="grid">
-<article class="course"><div class="symbol">HTML</div><h3>HTML</h3><p>Structure web pages with headings, paragraphs, links, images and forms.</p><a href="html.html">Start Learning →</a></article>
-<article class="course"><div class="symbol">CSS</div><h3>CSS</h3><p>Style websites with colors, fonts, spacing, layouts and responsive design.</p><a href="css.html">Start Learning →</a></article>
-<article class="course"><div class="symbol">JS</div><h3>JavaScript</h3><p>Add interaction with variables, conditions, loops and functions.</p><a href="javascript.html">Start Learning →</a></article>
-<article class="course"><div class="symbol">Py</div><h3>Python</h3><p>Learn programming with readable code, decisions, loops and functions.</p><a href="python.html">Start Learning →</a></article>
-<article class="course"><div class="symbol">C++</div><h3>C++</h3><p>Study programming fundamentals, input, output, conditions and loops.</p><a href="cpp.html">Start Learning →</a></article>
-<article class="course"><div class="symbol">SQL</div><h3>SQL</h3><p>Learn how databases store, retrieve and manage information.</p><a href="sql.html">Start Learning →</a></article>
-</div></section>
-<section class="section" id="about"><div class="about"><div class="heading"><h2>About ECOCODE</h2></div>
-<p><strong>ECOCODE</strong> is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik. <strong>Learn. Practice. Create.</strong></p></div></section>
-</main><footer>© 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.</footer>
-<script>
-const translations = {
-    en: {
-        heroTitle: "Learn to code.<br>Build your future.",
-        heroText: "Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.",
-        explore: "Explore Courses",
-        courseTitle: "Explore Our Courses",
-        courseSubtitle: "Choose a course and take your first step into programming.",
-        aboutTitle: "About ECOCODE",
-        aboutText: "ECOCODE is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik."
-    },
-    ru: {
-        heroTitle: "Учись программировать.<br>Создай своё будущее.",
-        heroText: "Начни изучать программирование с понятными уроками, практическими примерами и заданиями для начинающих. Учись в своём темпе.",
-        explore: "Изучить курсы",
-        courseTitle: "Наши курсы",
-        courseSubtitle: "Выбери курс и сделай первый шаг в программировании.",
-        aboutTitle: "О ECOCODE",
-        aboutText: "ECOCODE — образовательная платформа, созданная для того, чтобы сделать программирование доступным каждому. Наша цель — предоставлять понятные объяснения, полезные примеры и практические задания на английском, русском и таджикском языках."
-    },
-    tj: {
-        heroTitle: "Барномасозиро омӯз.<br>Ояндаи худро соз.",
-        heroText: "Омӯзиши барномасозиро бо дарсҳои фаҳмо, мисолҳои амалӣ ва супоришҳо барои навомӯзон оғоз кун. Бо суръати худ омӯз.",
-        explore: "Дидани курсҳо",
-        courseTitle: "Курсҳои мо",
-        courseSubtitle: "Курсро интихоб кун ва қадами аввалини худро дар барномасозӣ гузор.",
-        aboutTitle: "Дар бораи ECOCODE",
-        aboutText: "ECOCODE платформаи омӯзишӣ мебошад, ки барои дастрас кардани барномасозӣ ба ҳама сохта шудааст. Ҳадафи мо пешниҳод кардани шарҳҳои фаҳмо, мисолҳои муфид ва машқҳои амалӣ бо забонҳои англисӣ, русӣ ва тоҷикӣ мебошад."
-    }
-};
+        <a class="logo" href="index.html">
+            &lt;/&gt; ECOCODE
+        </a>
 
-function changeLanguage(lang) {
-    const t = translations[lang];
+        <nav>
+            <a href="#home"
+                data-en="Home"
+                data-ru="Главная"
+                data-tj="Асосӣ">Home</a>
 
-    document.querySelector(".hero h1").innerHTML = t.heroTitle;
-    document.querySelector(".hero p").textContent = t.heroText;
-    document.querySelector(".hero .btn").textContent = t.explore;
-    document.querySelector("#courses h2").textContent = t.courseTitle;
-    document.querySelector("#courses .heading p").textContent = t.courseSubtitle;
-    document.querySelector("#about h2").textContent = t.aboutTitle;
-    document.querySelector("#about .about p").innerHTML =
-        "<strong>ECOCODE</strong> " + t.aboutText.replace("ECOCODE", "") +
-        " <strong>Learn. Practice. Create.</strong>";
+            <a href="#courses"
+                data-en="Courses"
+                data-ru="Курсы"
+                data-tj="Курсҳо">Courses</a>
 
-    document.querySelectorAll("[data-" + lang + "]").forEach(element => {
-        element.textContent = element.getAttribute("data-" + lang);
-    });
-}
-</script>
+            <a href="#about"
+                data-en="About"
+                data-ru="О нас"
+                data-tj="Дар бораи мо">About</a>
+        </nav>
+
+        <select id="languageSelector"
+            onchange="changeLanguage(this.value)">
+
+            <option value="en">🇬🇧 English</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="tj">🇹🇯 Тоҷикӣ</option>
+
+        </select>
+
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <small>LEARN. PRACTICE. CREATE.</small>
+
+            <h1>
+                Learn to code.<br>
+                Build your future.
+            </h1>
+
+            <p>
+                Start your programming journey with clear lessons,
+                practical examples and beginner-friendly challenges.
+                Learn at your own pace.
+            </p>
+
+            <a class="btn" href="#courses">
+                Explore Courses
+            </a>
+
+        </section>
+
+        <!-- COURSES SECTION -->
+        <section class="section" id="courses">
+
+            <div class="heading">
+
+                <h2>Explore Our Courses</h2>
+
+                <p>
+                    Choose a course and take your first step
+                    into programming.
+                </p>
+
+            </div>
+
+            <div class="grid">
+
+                <article class="course">
+                    <div class="symbol">HTML</div>
+                    <h3>HTML</h3>
+                    <p>
+                        Structure web pages with headings,
+                        paragraphs, links, images and forms.
+                    </p>
+                    <a href="html.html">Start Learning →</a>
+                </article>
+
+                <article class="course">
+                    <div class="symbol">CSS</div>
+                    <h3>CSS</h3>
+                    <p>
+                        Style websites with colors, fonts,
+                        spacing, layouts and responsive design.
+                    </p>
+                    <a href="css.html">Start Learning →</a>
+                </article>
+
+                <article class="course">
+                    <div class="symbol">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>
+                        Add interaction with variables,
+                        conditions, loops and functions.
+                    </p>
+                    <a href="javascript.html">Start Learning →</a>
+                </article>
+
+                <article class="course">
+                    <div class="symbol">Py</div>
+                    <h3>Python</h3>
+                    <p>
+                        Learn programming with readable code,
+                        decisions, loops and functions.
+                    </p>
+                    <a href="python.html">Start Learning →</a>
+                </article>
+
+                <article class="course">
+                    <div class="symbol">C++</div>
+                    <h3>C++</h3>
+                    <p>
+                        Study programming fundamentals,
+                        input, output, conditions and loops.
+                    </p>
+                    <a href="cpp.html">Start Learning →</a>
+                </article>
+
+                <article class="course">
+                    <div class="symbol">SQL</div>
+                    <h3>SQL</h3>
+                    <p>
+                        Learn how databases store,
+                        retrieve and manage information.
+                    </p>
+                    <a href="sql.html">Start Learning →</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
+
+            <div class="about">
+
+                <div class="heading">
+                    <h2>About ECOCODE</h2>
+                </div>
+
+                <p>
+                    <strong>ECOCODE</strong> is a learning platform
+                    created to make programming easier to access
+                    for everyone. Our goal is to provide clear
+                    explanations, useful examples and practical
+                    activities in English, Russian and Tajik.
+
+                    <strong>Learn. Practice. Create.</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.
+    </footer>
+
+    <!-- LANGUAGE TRANSLATIONS -->
+    <script>
+
+        const translations = {
+
+            en: {
+                heroTitle: "Learn to code.<br>Build your future.",
+                heroText: "Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.",
+                explore: "Explore Courses",
+                courseTitle: "Explore Our Courses",
+                courseSubtitle: "Choose a course and take your first step into programming.",
+                aboutTitle: "About ECOCODE",
+                aboutText: "ECOCODE is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik."
+            },
+
+            ru: {
+                heroTitle: "Учись программировать.<br>Создай своё будущее.",
+                heroText: "Начни изучать программирование с понятными уроками, практическими примерами и заданиями для начинающих. Учись в своём темпе.",
+                explore: "Изучить курсы",
+                courseTitle: "Наши курсы",
+                courseSubtitle: "Выбери курс и сделай первый шаг в программировании.",
+                aboutTitle: "О ECOCODE",
+                aboutText: "ECOCODE — образовательная платформа, созданная для того, чтобы сделать программирование доступным каждому. Наша цель — предоставлять понятные объяснения, полезные примеры и практические задания на английском, русском и таджикском языках."
+            },
+
+            tj: {
+                heroTitle: "Барномасозиро омӯз.<br>Ояндаи худро соз.",
+                heroText: "Омӯзиши барномасозиро бо дарсҳои фаҳмо, мисолҳои амалӣ ва супоришҳо барои навомӯзон оғоз кун. Бо суръати худ омӯз.",
+                explore: "Дидани курсҳо",
+                courseTitle: "Курсҳои мо",
+                courseSubtitle: "Курсро интихоб кун ва қадами аввалини худро дар барномасозӣ гузор.",
+                aboutTitle: "Дар бораи ECOCODE",
+                aboutText: "ECOCODE платформаи омӯзишӣ мебошад, ки барои дастрас кардани барномасозӣ ба ҳама сохта шудааст. Ҳадафи мо пешниҳод кардани шарҳҳои фаҳмо, мисолҳои муфид ва машқҳои амалӣ бо забонҳои англисӣ, русӣ ва тоҷикӣ мебошад."
+            }
+
+        };
+
+        function changeLanguage(lang) {
+
+            const t = translations[lang];
+
+            if (!t) return;
+
+            document.querySelector(".hero h1").innerHTML =
+                t.heroTitle;
+
+            document.querySelector(".hero p").textContent =
+                t.heroText;
+
+            document.querySelector(".hero .btn").textContent =
+                t.explore;
+
+            document.querySelector("#courses h2").textContent =
+                t.courseTitle;
+
+            document.querySelector("#courses .heading p").textContent =
+                t.courseSubtitle;
+
+            document.querySelector("#about h2").textContent =
+                t.aboutTitle;
+
+            document.querySelector("#about .about p").innerHTML =
+                "<strong>ECOCODE</strong> " +
+                t.aboutText.replace("ECOCODE", "") +
+                " <strong>Learn. Practice. Create.</strong>";
+
+            document.querySelectorAll("[data-" + lang + "]")
+                .forEach(element => {
+                    element.textContent =
+                        element.getAttribute("data-" + lang);
+                });
+
+        }
+
+    </script>
+
 </body>
 </html>
