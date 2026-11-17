@@ -1,562 +1,357 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="ECOCODE - Learn programming with practical courses in HTML, CSS, JavaScript, Python, C++ and SQL.">
     <title>ECOCODE | Learn. Practice. Create.</title>
-
-    <!-- SEO -->
-    <meta name="description"
-        content="ECOCODE is a programming education platform. Learn HTML, CSS, JavaScript, Python, C++ and SQL with practical lessons.">
-
-    <meta name="author" content="Firdavs">
-
-    <!-- Social Media Preview -->
-    <meta property="og:title"
-        content="ECOCODE | Learn. Practice. Create.">
-
-    <meta property="og:description"
-        content="Learn HTML, CSS, JavaScript, Python, C++ and SQL with practical lessons and coding exercises.">
-
-    <meta property="og:type" content="website">
-
-    <meta property="og:url"
-        content="https://fsaidasrorzoda-commits.github.io/my-first-website/">
-
-    <meta property="og:image"
-        content="https://fsaidasrorzoda-commits.github.io/my-first-website/profile.png">
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title"
-        content="ECOCODE | Learn. Practice. Create.">
-
-    <meta name="twitter:description"
-        content="Your programming journey starts here. Learn. Practice. Create.">
-
-    <meta name="twitter:image"
-        content="https://fsaidasrorzoda-commits.github.io/my-first-website/profile.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="profile.png">
-
-    <style>
-        :root {
-            --navy: #101d35;
-            --blue: #1764a0;
-            --cyan: #35c5f0;
-            --ink: #17233d;
-            --muted: #607086;
-            --bg: #f4f7fb;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--navy);
-            color: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-            color: var(--cyan);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 22px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: var(--cyan);
-        }
-
-        .hero {
-            background: linear-gradient(120deg, #101d35, #174c78);
-            color: white;
-            text-align: center;
-            padding: 80px 7%;
-        }
-
-        .hero small {
-            color: #8ce5ff;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 {
-            font-size: clamp(36px, 6vw, 60px);
-            line-height: 1.12;
-            margin: 14px;
-        }
-
-        .hero p {
-            max-width: 680px;
-            margin: 0 auto 25px;
-            color: #e0eaf5;
-            font-size: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--cyan);
-            color: var(--navy);
-            padding: 13px 22px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .section {
-            max-width: 1120px;
-            margin: 55px auto;
-            padding: 0 22px;
-        }
-
-        .heading {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .heading h2 {
-            font-size: 32px;
-            color: var(--navy);
-        }
-
-        .heading p {
-            color: var(--muted);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(245px, 1fr)
-            );
-            gap: 20px;
-        }
-
-        .course {
-            background: white;
-            border: 1px solid #e4eaf2;
-            border-radius: 14px;
-            padding: 24px;
-            box-shadow: 0 5px 18px #10213b0a;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .symbol {
-            background: #e5f5ff;
-            color: var(--blue);
-            padding: 10px 13px;
-            border-radius: 10px;
-            font-weight: 900;
-            margin-bottom: 14px;
-        }
-
-        .course h3 {
-            font-size: 22px;
-            margin-bottom: 7px;
-        }
-
-        .course p {
-            color: var(--muted);
-            margin-bottom: 18px;
-            flex: 1;
-        }
-
-        .course a {
-            color: #126da5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .course a:hover {
-            text-decoration: underline;
-        }
-
-        .about {
-            background: #e8f5fc;
-            border-radius: 16px;
-            padding: 30px;
-        }
-
-        .about p {
-            max-width: 850px;
-            margin: auto;
-        }
-
-        footer {
-            background: var(--navy);
-            color: #dbe6f2;
-            text-align: center;
-            padding: 28px;
-            margin-top: 60px;
-        }
-
-        footer strong {
-            color: var(--cyan);
-        }
-
-        #languageSelector {
-            padding: 9px 12px;
-            border-radius: 7px;
-            border: 1px solid var(--cyan);
-            background: white;
-            color: var(--navy);
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        @media(max-width: 600px) {
-            header {
-                justify-content: center;
-            }
-
-            nav {
-                gap: 14px;
-            }
-
-            .hero {
-                padding: 60px 20px;
-            }
-
-            #languageSelector {
-                margin-top: 8px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h2>JavaScript Practice</h2>
 
-<p id="message">
-    Hello! I am learning JavaScript.
-</p>
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                ECO<span>CODE</span>
+                <small>LEARN. PRACTICE. CREATE.</small>
+            </a>
 
-<button id="changeTextBtn">
-    Change Text
-</button>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
 
-    <!-- HEADER -->
-    <header>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <a class="logo" href="index.html">
-            &lt;/&gt; ECOCODE
-        </a>
-
-        <nav>
-            <a href="#home"
-                data-en="Home"
-                data-ru="Главная"
-                data-tj="Асосӣ">Home</a>
-
-            <a href="#courses"
-                data-en="Courses"
-                data-ru="Курсы"
-                data-tj="Курсҳо">Courses</a>
-
-            <a href="#about"
-                data-en="About"
-                data-ru="О нас"
-                data-tj="Дар бораи мо">About</a>
+            <a href="#courses" class="nav-button">Start Learning</a>
         </nav>
-
-        <select id="languageSelector"
-            onchange="changeLanguage(this.value)">
-
-            <option value="en">🇬🇧 English</option>
-            <option value="ru">🇷🇺 Русский</option>
-            <option value="tj">🇹🇯 Тоҷикӣ</option>
-
-        </select>
-
     </header>
 
     <main>
 
         <!-- HERO SECTION -->
         <section class="hero" id="home">
+            <div class="container hero-content">
 
-<section class="hero" id="home">
+                <div class="hero-text">
+                    <span class="eyebrow">WELCOME TO ECOCODE</span>
 
-    <div class="hero-content">
+                    <h1>
+                        Learn to code.<br>
+                        <span>Build your future.</span>
+                    </h1>
 
-        <div class="hero-label">
-            🚀 YOUR PROGRAMMING JOURNEY STARTS HERE
-        </div>
-
-        <h1>
-            Learn to Code.<br>
-            <span>Build Your Future.</span>
-        </h1>
-
-        <p>
-            Discover programming through practical lessons,
-            interactive examples and real-world projects.
-            Start learning today with ECOCODE.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#courses" class="btn">
-                Explore Courses →
-            </a>
-
-            <a href="#about" class="secondary-btn">
-                Discover ECOCODE
-            </a>
-
-        </div>
-
-        <div class="hero-stats">
-
-            <div>
-                <strong>6+</strong>
-                <small>Programming Courses</small>
-            </div>
-
-            <div>
-                <strong>3</strong>
-                <small>Learning Languages</small>
-            </div>
-
-            <div>
-                <strong>∞</strong>
-                <small>Learning Opportunities</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- COURSES SECTION -->
-        <section class="section" id="courses">
-
-            <div class="heading">
-
-                <h2>Explore Our Courses</h2>
-
-                <p>
-                    Choose a course and take your first step
-                    into programming.
-                </p>
-
-            </div>
-
-            <div class="grid">
-
-                <article class="course">
-                    <div class="symbol">HTML</div>
-                    <h3>HTML</h3>
                     <p>
-                        Structure web pages with headings,
-                        paragraphs, links, images and forms.
+                        Start your programming journey with clear lessons,
+                        practical examples and beginner-friendly challenges.
+                        Learn at your own pace.
                     </p>
-                    <a href="html.html">Start Learning →</a>
-                </article>
 
-                <article class="course">
-                    <div class="symbol">CSS</div>
-                    <h3>CSS</h3>
-                    <p>
-                        Style websites with colors, fonts,
-                        spacing, layouts and responsive design.
-                    </p>
-                    <a href="css.html">Start Learning →</a>
-                </article>
+                    <div class="hero-buttons">
+                        <a href="#courses" class="btn btn-primary">
+                            Explore Courses →
+                        </a>
 
-                <article class="course">
-                    <div class="symbol">JS</div>
-                    <h3>JavaScript</h3>
-                    <p>
-                        Add interaction with variables,
-                        conditions, loops and functions.
-                    </p>
-                    <a href="javascript.html">Start Learning →</a>
-                </article>
+                        <a href="#about" class="btn btn-outline">
+                            Discover ECOCODE
+                        </a>
+                    </div>
 
-                <article class="course">
-                    <div class="symbol">Py</div>
-                    <h3>Python</h3>
-                    <p>
-                        Learn programming with readable code,
-                        decisions, loops and functions.
-                    </p>
-                    <a href="python.html">Start Learning →</a>
-                </article>
+                    <div class="hero-stats">
+                        <div>
+                            <strong>06+</strong>
+                            <span>Programming courses</span>
+                        </div>
 
-                <article class="course">
-                    <div class="symbol">C++</div>
-                    <h3>C++</h3>
-                    <p>
-                        Study programming fundamentals,
-                        input, output, conditions and loops.
-                    </p>
-                    <a href="cpp.html">Start Learning →</a>
-                </article>
+                        <div>
+                            <strong>03</strong>
+                            <span>Learning languages</span>
+                        </div>
 
-                <article class="course">
-                    <div class="symbol">SQL</div>
-                    <h3>SQL</h3>
-                    <p>
-                        Learn how databases store,
-                        retrieve and manage information.
-                    </p>
-                    <a href="sql.html">Start Learning →</a>
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section class="section" id="about">
-
-            <div class="about">
-
-                <div class="heading">
-                    <h2>About ECOCODE</h2>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Beginner friendly</span>
+                        </div>
+                    </div>
                 </div>
 
-                <p>
-                    <strong>ECOCODE</strong> is a learning platform
-                    created to make programming easier to access
-                    for everyone. Our goal is to provide clear
-                    explanations, useful examples and practical
-                    activities in English, Russian and Tajik.
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <p>my-first-code.html</p>
+                        </div>
 
-                    <strong>Learn. Practice. Create.</strong>
-                </p>
+                        <div class="code-content">
+                            <p><span class="purple">&lt;html&gt;</span></p>
+                            <p>&nbsp;&nbsp;<span class="purple">&lt;body&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;h1&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">Hello, World!</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">&lt;/h1&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">&lt;p&gt;</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">My coding journey starts here.</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">&lt;/p&gt;</span></p>
+                            <p>&nbsp;&nbsp;<span class="purple">&lt;/body&gt;</span></p>
+                            <p><span class="purple">&lt;/html&gt;</span></p>
+                        </div>
+
+                        <div class="code-footer">
+                            <span>●</span> ECOCODE Learning Environment
+                        </div>
+                    </div>
+                </div>
 
             </div>
+        </section>
 
+        <!-- COURSES SECTION -->
+        <section class="courses section" id="courses">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">START YOUR JOURNEY</span>
+                    <h2>Explore Our Courses</h2>
+                    <p>Choose a course and take your first step into programming.</p>
+                </div>
+
+                <!-- SEARCH -->
+                <div class="course-tools">
+                    <input
+                        type="search"
+                        id="courseSearch"
+                        placeholder="Search courses..."
+                        aria-label="Search programming courses">
+
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="web">Web Development</button>
+                        <button class="filter-btn" data-filter="programming">Programming</button>
+                        <button class="filter-btn" data-filter="database">Database</button>
+                    </div>
+                </div>
+
+                <!-- COURSE CARDS -->
+                <div class="course-grid" id="courseGrid">
+
+                    <article class="course-card" data-category="web">
+                        <div class="course-icon html-icon">5</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>HTML</h3>
+                        <p>Learn how to create webpages using headings, paragraphs, links, images and forms.</p>
+                        <button class="course-link" data-course="html">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                    <article class="course-card" data-category="web">
+                        <div class="course-icon css-icon">#</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>CSS</h3>
+                        <p>Make beautiful websites with colors, fonts, layouts, spacing and responsive design.</p>
+                        <button class="course-link" data-course="css">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                    <article class="course-card" data-category="web">
+                        <div class="course-icon js-icon">JS</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>JavaScript</h3>
+                        <p>Make websites interactive using variables, conditions, loops and functions.</p>
+                        <button class="course-link" data-course="javascript">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                    <article class="course-card" data-category="programming">
+                        <div class="course-icon python-icon">Py</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>Python</h3>
+                        <p>Discover programming through simple syntax, decisions, loops and functions.</p>
+                        <button class="course-link" data-course="python">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                    <article class="course-card" data-category="programming">
+                        <div class="course-icon cpp-icon">C++</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>C++</h3>
+                        <p>Study programming fundamentals, input, output, conditions and loops.</p>
+                        <button class="course-link" data-course="cpp">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                    <article class="course-card" data-category="database">
+                        <div class="course-icon sql-icon">DB</div>
+                        <span class="course-level">BEGINNER</span>
+                        <h3>SQL</h3>
+                        <p>Learn how databases store, retrieve and manage information.</p>
+                        <button class="course-link" data-course="sql">
+                            Start Learning →
+                        </button>
+                    </article>
+
+                </div>
+
+                <p id="noResults" class="no-results" hidden>
+                    No courses found. Try another search.
+                </p>
+
+                <!-- COURSE DETAILS -->
+                <div class="course-details" id="courseDetails" hidden>
+                    <button id="closeDetails" class="close-button"
+                        aria-label="Close course details">✕</button>
+
+                    <span class="eyebrow">YOUR NEXT STEP</span>
+                    <h3 id="detailTitle">Course title</h3>
+                    <p id="detailDescription">Course description</p>
+                    <p id="detailLevel">Beginner level</p>
+                    <p class="detail-note">
+                        Course lessons will be added as ECOCODE develops.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY ECOCODE -->
+        <section class="features section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">WHY CHOOSE US?</span>
+                    <h2>Learn by Doing</h2>
+                    <p>Our goal is to make programming understandable and practical.</p>
+                </div>
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Simple Lessons</h3>
+                        <p>Understand difficult concepts through clear explanations and examples.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>Practical Learning</h3>
+                        <p>Practice coding and develop your own programming projects.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Learn in Your Language</h3>
+                        <p>Our vision is to support learning in English, Russian and Tajik.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="container about-content">
+
+                <div>
+                    <span class="eyebrow">OUR STORY</span>
+                    <h2>About ECOCODE</h2>
+
+                    <p>
+                        ECOCODE is a programming education platform created
+                        to make coding easier to access for everyone.
+                    </p>
+
+                    <p>
+                        Our mission is to help students and beginners develop
+                        digital skills through clear explanations, useful
+                        examples and practical activities.
+                    </p>
+
+                    <p>
+                        We aim to provide educational resources in English,
+                        Russian and Tajik.
+                    </p>
+
+                    <a href="#courses" class="btn btn-primary">
+                        Start Your Journey →
+                    </a>
+                </div>
+
+                <div class="about-box">
+                    <span class="about-symbol">&lt;/&gt;</span>
+                    <h3>Think. Code. Create.</h3>
+                    <p>Every expert was once a beginner.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">GET IN TOUCH</span>
+                    <h2>Contact ECOCODE</h2>
+                    <p>Have a question or suggestion? Send us a message.</p>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+
+                    <label for="userName">Your name</label>
+                    <input type="text" id="userName"
+                        placeholder="Enter your name" required>
+
+                    <label for="userEmail">Your email</label>
+                    <input type="email" id="userEmail"
+                        placeholder="Enter your email" required>
+
+                    <label for="userMessage">Your message</label>
+                    <textarea id="userMessage"
+                        placeholder="Write your message..." rows="5"
+                        required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+
+                    <p id="formMessage" aria-live="polite"></p>
+
+                </form>
+
+            </div>
         </section>
 
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        © 2026 <strong>ECOCODE</strong> | Learn. Practice. Create.
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="#home" class="logo">
+                ECO<span>CODE</span>
+                <small>LEARN. PRACTICE. CREATE.</small>
+            </a>
+
+            <p>Building skills. Creating opportunities.</p>
+
+            <p>© <span id="year">2026</span> ECOCODE. All rights reserved.</p>
+
+        </div>
     </footer>
-
-    <!-- LANGUAGE TRANSLATIONS -->
-    <script>
-
-        const translations = {
-
-            en: {
-                heroTitle: "Learn to code.<br>Build your future.",
-                heroText: "Start your programming journey with clear lessons, practical examples and beginner-friendly challenges. Learn at your own pace.",
-                explore: "Explore Courses",
-                courseTitle: "Explore Our Courses",
-                courseSubtitle: "Choose a course and take your first step into programming.",
-                aboutTitle: "About ECOCODE",
-                aboutText: "ECOCODE is a learning platform created to make programming easier to access for everyone. Our goal is to provide clear explanations, useful examples and practical activities in English, Russian and Tajik."
-            },
-
-            ru: {
-                heroTitle: "Учись программировать.<br>Создай своё будущее.",
-                heroText: "Начни изучать программирование с понятными уроками, практическими примерами и заданиями для начинающих. Учись в своём темпе.",
-                explore: "Изучить курсы",
-                courseTitle: "Наши курсы",
-                courseSubtitle: "Выбери курс и сделай первый шаг в программировании.",
-                aboutTitle: "О ECOCODE",
-                aboutText: "ECOCODE — образовательная платформа, созданная для того, чтобы сделать программирование доступным каждому. Наша цель — предоставлять понятные объяснения, полезные примеры и практические задания на английском, русском и таджикском языках."
-            },
-
-            tj: {
-                heroTitle: "Барномасозиро омӯз.<br>Ояндаи худро соз.",
-                heroText: "Омӯзиши барномасозиро бо дарсҳои фаҳмо, мисолҳои амалӣ ва супоришҳо барои навомӯзон оғоз кун. Бо суръати худ омӯз.",
-                explore: "Дидани курсҳо",
-                courseTitle: "Курсҳои мо",
-                courseSubtitle: "Курсро интихоб кун ва қадами аввалини худро дар барномасозӣ гузор.",
-                aboutTitle: "Дар бораи ECOCODE",
-                aboutText: "ECOCODE платформаи омӯзишӣ мебошад, ки барои дастрас кардани барномасозӣ ба ҳама сохта шудааст. Ҳадафи мо пешниҳод кардани шарҳҳои фаҳмо, мисолҳои муфид ва машқҳои амалӣ бо забонҳои англисӣ, русӣ ва тоҷикӣ мебошад."
-            }
-
-        };
-
-        function changeLanguage(lang) {
-
-            const t = translations[lang];
-
-            if (!t) return;
-
-            document.querySelector(".hero h1").innerHTML =
-                t.heroTitle;
-
-            document.querySelector(".hero p").textContent =
-                t.heroText;
-
-            document.querySelector(".hero .btn").textContent =
-                t.explore;
-
-            document.querySelector("#courses h2").textContent =
-                t.courseTitle;
-
-            document.querySelector("#courses .heading p").textContent =
-                t.courseSubtitle;
-
-            document.querySelector("#about h2").textContent =
-                t.aboutTitle;
-
-            document.querySelector("#about .about p").innerHTML =
-                "<strong>ECOCODE</strong> " +
-                t.aboutText.replace("ECOCODE", "") +
-                " <strong>Learn. Practice. Create.</strong>";
-
-            document.querySelectorAll("[data-" + lang + "]")
-                .forEach(element => {
-                    element.textContent =
-                        element.getAttribute("data-" + lang);
-                });
-
-        }
-
-    </script>
 
 </body>
 </html>
