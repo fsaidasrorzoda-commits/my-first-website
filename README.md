@@ -20,3 +20,9 @@ Upload all files and folders to the root of your existing `my-first-website` Git
 
 ## Note
 This is a front-end learning platform starter, not the full editorial catalog of W3Schools. Python, C++, and SQL examples are displayed but cannot be executed in the browser without an additional execution service.
+
+## New interactive features
+- Code Lab supports HTML/CSS/JavaScript live preview, local save and HTML download.
+- Code Coach is an offline rule-based study helper, **not** a connected generative AI agent.
+- To connect a real AI model, use a secure serverless/backend API; never expose API credentials in public client-side code.
+- Python, C++ and SQL execution are not included; these need language runtimes or secure sandbox services.
