@@ -138,3 +138,11 @@ backToTop.addEventListener("click", function() {
     });
 
 });
+const changeTextButton = document.querySelector("#changeTextBtn");
+const message = document.querySelector("#message");
+
+if (changeTextButton && message) {
+    changeTextButton.addEventListener("click", function() {
+        message.textContent = "Excellent! I changed this text using JavaScript! 🚀";
+    });
+}
