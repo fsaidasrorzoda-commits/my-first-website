@@ -1,200 +1,31 @@
-
-/* =================================
-   ECOCODE - JAVASCRIPT
-================================= */
-
-// 1. MOBILE NAVIGATION
-
-const menuToggle = document.querySelector("#menuToggle");
-const navLinks = document.querySelector("#navLinks");
-
-menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("show");
-
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.textContent = isOpen ? "✕" : "☰";
-});
-
-// Close mobile menu after selecting a link
-
-document.querySelectorAll(".nav-links a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("show");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.textContent = "☰";
-    });
-});
-
-
-// 2. COURSE SEARCH
-
-const courseSearch = document.querySelector("#courseSearch");
-const courseCards = document.querySelectorAll(".course-card");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const noResults = document.querySelector("#noResults");
-
-let currentFilter = "all";
-
-function filterCourses() {
-
-    const searchText = courseSearch.value.toLowerCase().trim();
-    let visibleCount = 0;
-
-    courseCards.forEach(function (card) {
-
-        const category = card.dataset.category;
-        const content = card.textContent.toLowerCase();
-
-        const matchesSearch = content.includes(searchText);
-
-        const matchesFilter =
-            currentFilter === "all" ||
-            category === currentFilter;
-
-        const shouldShow = matchesSearch && matchesFilter;
-
-        card.hidden = !shouldShow;
-
-        if (shouldShow) {
-            visibleCount++;
-        }
-
-    });
-
-    noResults.hidden = visibleCount !== 0;
-}
-
-courseSearch.addEventListener("input", filterCourses);
-
-
-// 3. COURSE FILTER BUTTONS
-
-filterButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        filterButtons.forEach(function (item) {
-            item.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        currentFilter = button.dataset.filter;
-
-        filterCourses();
-
-    });
-
-});
-
-
-// 4. COURSE DETAILS
-
-const courseDetails = document.querySelector("#courseDetails");
-const detailTitle = document.querySelector("#detailTitle");
-const detailDescription = document.querySelector("#detailDescription");
-const detailLevel = document.querySelector("#detailLevel");
-const closeDetails = document.querySelector("#closeDetails");
-
-const courseInformation = {
-
-    html: {
-        title: "HTML - Web Structure",
-        description: "Learn HTML elements, headings, paragraphs, links, images, lists and forms. Build your first webpage.",
-        level: "Beginner | Web Development"
-    },
-
-    css: {
-        title: "CSS - Web Design",
-        description: "Learn colors, backgrounds, typography, spacing, Flexbox, Grid and responsive web design.",
-        level: "Beginner | Web Development"
-    },
-
-    javascript: {
-        title: "JavaScript - Web Interaction",
-        description: "Learn variables, data types, conditions, loops, functions and interactive webpage features.",
-        level: "Beginner | Web Development"
-    },
-
-    python: {
-        title: "Python - Programming",
-        description: "Start with variables, input, output, conditions, loops and functions using Python.",
-        level: "Beginner | Programming"
-    },
-
-    cpp: {
-        title: "C++ - Programming",
-        description: "Learn program structure, variables, input, output, if/else, loops and functions.",
-        level: "Beginner | Programming"
-    },
-
-    sql: {
-        title: "SQL - Database",
-        description: "Understand databases, tables, records and SQL commands such as SELECT, INSERT, UPDATE and DELETE.",
-        level: "Beginner | Database"
-    }
-
+'use strict';
+const courses={
+ html:{name:'HTML',icon:'🌐',desc:'Build the structure of web pages.',sections:[['Getting started',[['Introduction','HTML is the language used to structure web pages. It uses elements to describe headings, paragraphs, links, images, and more.','<h1>Hello, ECOCODE!</h1>\n<p>This is my first web page.</p>','Which tag creates the largest heading?',['<h1>','<p>','<img>'],0],['HTML Editors','You can write HTML in Notepad, VS Code, or any plain-text editor. Save the file as index.html and open it in your browser.','<!DOCTYPE html>\n<html>\n<body>\n  <h1>My Website</h1>\n</body>\n</html>','Which extension is used for HTML files?',['.css','.html','.py'],1],['Basic Structure','A standard HTML document contains a doctype declaration, html element, head, and body. Visible page content belongs in the body.','<!DOCTYPE html>\n<html lang="en">\n<head><title>My Page</title></head>\n<body><p>Hello!</p></body>\n</html>','Where does visible page content go?',['<head>','<title>','<body>'],2],['Headings and Paragraphs','Use h1 through h6 for headings, and p for paragraphs. Choose heading levels by meaning, not simply by appearance.','<h1>Main title</h1>\n<h2>Section title</h2>\n<p>A useful paragraph.</p>','Which element creates a paragraph?',['<p>','<h2>','<br>'],0]]],['Page elements',[['Links','Links connect web pages. Use the a element and its href attribute to specify the destination.','<a href="https://example.com">Visit a website</a>','Which attribute specifies a link destination?',['src','href','alt'],1],['Images','Use img to display an image. The src attribute contains the image path, and alt describes the image for accessibility.','<img src="photo.jpg" alt="A mountain landscape" width="250">','What is the purpose of alt text?',['Describe the image','Change its color','Add animation'],0],['Lists','Use ul for unordered lists, ol for ordered lists, and li for each list item.','<ul>\n <li>HTML</li>\n <li>CSS</li>\n</ul>','Which element makes a numbered list?',['<ul>','<ol>','<li>'],1],['Tables','HTML tables organize tabular data into rows and cells. Use table, tr, th, and td.','<table>\n<tr><th>Name</th><th>Score</th></tr>\n<tr><td>Ali</td><td>95</td></tr>\n</table>','Which tag defines a table row?',['<td>','<th>','<tr>'],2],['Forms','Forms collect user input. Common controls include input, label, textarea, select, and button.','<form>\n<label for="name">Name</label>\n<input id="name" name="name">\n<button type="submit">Send</button>\n</form>','Which element creates a text input?',['<input>','<section>','<footer>'],0]]]]},
+ css:{name:'CSS',icon:'🎨',desc:'Style websites with layouts, colors and effects.',sections:[['Fundamentals',[['Introduction','CSS controls the appearance of HTML elements: colors, fonts, spacing, and layout.','h1 {\n  color: teal;\n  font-size: 36px;\n}','Which language styles HTML pages?',['SQL','CSS','Python'],1],['Selectors','Selectors identify which HTML elements should receive a style. Use a tag name, .class, or #id.','.card { padding: 20px; }\n#title { color: green; }','Which symbol selects a class?',['.','#','@'],0],['Colors and Backgrounds','Set text colors with color and background colors with background-color. Hex codes and named colors are both supported.','body { background-color: #f0f7f6; }\nh1 { color: #087f70; }','Which property changes text color?',['color','font-size','margin'],0],['Box Model','Every element is laid out using content, padding, border, and margin.','div {\n padding: 16px;\n border: 2px solid teal;\n margin: 20px;\n}','Which property adds space inside a border?',['margin','padding','width'],1]]],['Layout',[['Flexbox','Flexbox is useful for arranging elements in a row or column and aligning them.','.container {\n display: flex;\n gap: 16px;\n justify-content: center;\n}','Which declaration enables Flexbox?',['display: flex','position: flex','flex: true'],0],['Grid','CSS Grid organizes content into rows and columns.','.grid {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 16px;\n}','Which property defines grid columns?',['grid-template-columns','font-family','border-radius'],0],['Responsive Design','Media queries let you adjust layouts for different screen widths.','@media (max-width: 600px) {\n .grid { grid-template-columns: 1fr; }\n}','What is used to create breakpoint rules?',['@media','@import','@font-face'],0]]]]},
+ javascript:{name:'JavaScript',icon:'⚡',desc:'Make web pages interactive.',sections:[['Basics',[['Introduction','JavaScript adds behavior to websites, such as responding to clicks, changing content, and checking forms.','document.querySelector("h1").textContent = "Hello!";','What does JavaScript mainly add to websites?',['Interactivity','Database tables','Image formats'],0],['Variables','Use let for values that may change and const for values that should not be reassigned.','const name = "ECOCODE";\nlet score = 10;\nscore += 5;\nconsole.log(name, score);','Which keyword declares a reassignable variable?',['const','let','style'],1],['Functions','Functions are reusable blocks of code. They can accept parameters and return results.','function greet(name) {\n return "Hello, " + name;\n}\nconsole.log(greet("student"));','Which keyword defines a function?',['function','className','returning'],0],['Conditions','An if statement runs code only when a condition is true. Use else for the alternative.','const score = 80;\nif (score >= 60) {\n console.log("Passed");\n} else {\n console.log("Try again");\n}','Which keyword introduces an alternative branch?',['for','else','let'],1]]],['Web interaction',[['DOM','The Document Object Model lets JavaScript find and change HTML elements.','document.getElementById("message").textContent = "Updated!";','Which method finds an element by its ID?',['getElementById','fetchStyle','addClass'],0],['Events','Events are actions like clicks or keyboard input. Add event listeners to respond to them.','document.querySelector("button")\n .addEventListener("click", () => alert("Clicked!"));','Which event occurs when a button is pressed?',['load','click','submitOnly'],1],['Arrays','Arrays store ordered collections of values. Array indexes begin at zero.','const languages = ["HTML", "CSS", "JS"];\nconsole.log(languages[0]);','What is the first array index?',['1','-1','0'],2]]]]},
+ python:{name:'Python',icon:'🐍',desc:'Learn beginner-friendly programming and logic.',sections:[['Basics',[['Introduction','Python is a general-purpose programming language often used for automation, data science, and web development.','print("Hello, ECOCODE!")','Which function displays text in Python?',['echo()','print()','show()'],1],['Variables','Variables store data. Python infers types from assigned values.','name = "ECOCODE"\nage = 3\nprint(name, age)','Which operator assigns a value?',['=','==','==='],0],['Input and Output','Use input() to read text from a user and print() to display output.','name = input("Your name: ")\nprint("Hello", name)','Which function reads user input?',['scan()','input()','readline()'],1],['Conditions','Python uses indentation to group blocks after if, elif, and else.','score = 75\nif score >= 60:\n    print("Passed")\nelse:\n    print("Try again")','What defines a Python code block?',['Curly braces','Indentation','Semicolons'],1]]],['Next steps',[['Loops','Use for to iterate over a sequence and while to repeat while a condition is true.','for number in range(1, 4):\n    print(number)','Which keyword iterates through a sequence?',['for','when','looping'],0],['Lists','A list stores multiple values and can be changed after creation.','fruits = ["apple", "pear"]\nfruits.append("banana")\nprint(fruits[0])','Which method adds an item to a list?',['push()','append()','insertEnd()'],1],['Functions','Define reusable functions with def. A function can return a value.','def square(number):\n    return number * number\nprint(square(5))','Which keyword defines a Python function?',['function','def','func'],1]]]]},
+ cpp:{name:'C++',icon:'⚙️',desc:'Understand compiled programming and algorithms.',sections:[['Basics',[['Introduction','C++ is a compiled language used in systems software, games, and high-performance applications.','#include <iostream>\nint main() {\n std::cout << "Hello, ECOCODE!";\n return 0;\n}','Which function starts a typical C++ program?',['start()','main()','print()'],1],['Variables','C++ variables have explicit types, such as int, double, char, and string.','int age = 15;\ndouble price = 4.5;\nbool active = true;','Which type stores whole numbers?',['int','double','bool'],0],['Input and Output','Use std::cout for output and std::cin for keyboard input.','#include <iostream>\nint main() {\n int age;\n std::cin >> age;\n std::cout << age;\n}','Which object reads standard input?',['std::cin','std::cout','std::endl'],0],['If and Else','Use if and else to make decisions based on conditions.','int score = 80;\nif (score >= 60) {\n std::cout << "Passed";\n} else {\n std::cout << "Failed";\n}','Which operator compares two values for equality?',['=','==','!='],1]]],['Next steps',[['Loops','Use for and while loops to repeat instructions.','for (int i = 1; i <= 5; i++) {\n std::cout << i << " ";\n}','Which loop commonly uses initialization, condition, and update?',['for','if','switch'],0],['Functions','Functions group reusable code and can return a value.','int add(int a, int b) {\n return a + b;\n}','Which keyword sends a result back?',['send','return','output'],1]]]]},
+ sql:{name:'SQL',icon:'🗄️',desc:'Query, filter, and organize database records.',sections:[['Query basics',[['Introduction','SQL is a language for working with relational databases. It can retrieve, insert, update, and delete data.','SELECT * FROM students;','Which statement retrieves data?',['SELECT','DELETE','DROP'],0],['SELECT','Use SELECT to choose the columns you want to see from a table.','SELECT name, grade FROM students;','Which symbol means all columns?',['#','*','&'],1],['WHERE','The WHERE clause filters rows that match a condition.','SELECT * FROM students\nWHERE grade >= 90;','Which clause filters rows?',['ORDER BY','WHERE','FROM'],1],['ORDER BY','ORDER BY sorts results ascending (ASC) or descending (DESC).','SELECT name, grade FROM students\nORDER BY grade DESC;','Which keyword sorts highest first?',['ASC','DESC','HIGH'],1]]],['Working with data',[['INSERT','INSERT INTO adds a new row to a table.','INSERT INTO students (name, grade)\nVALUES (\'Sara\', 95);','Which statement adds a row?',['INSERT INTO','SELECT','ORDER BY'],0],['UPDATE','UPDATE changes existing records. Always use an appropriate WHERE clause to avoid changing every row.','UPDATE students\nSET grade = 98\nWHERE id = 1;','What limits which rows are updated?',['WHERE','VALUES','ASC'],0],['COUNT','COUNT is an aggregate function that counts rows or non-null values.','SELECT COUNT(*) FROM students;','Which function counts records?',['SUM','COUNT','SORT'],1]]]]}
 };
-
-document.querySelectorAll(".course-link").forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        const courseName = button.dataset.course;
-        const course = courseInformation[courseName];
-
-        if (!course) return;
-
-        detailTitle.textContent = course.title;
-        detailDescription.textContent = course.description;
-        detailLevel.textContent = course.level;
-
-        courseDetails.hidden = false;
-
-        courseDetails.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
-
-    });
-
-});
-
-
-// CLOSE COURSE DETAILS
-
-closeDetails.addEventListener("click", function () {
-    courseDetails.hidden = true;
-});
-
-
-// 5. CONTACT FORM DEMONSTRATION
-
-const contactForm = document.querySelector("#contactForm");
-const formMessage = document.querySelector("#formMessage");
-
-contactForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    const name = document.querySelector("#userName").value.trim();
-
-    formMessage.textContent =
-        "Thank you, " + name +
-        "! Your form works, but message delivery is not connected yet.";
-
-    contactForm.reset();
-
-});
-
-
-// 6. AUTOMATIC COPYRIGHT YEAR
-
-document.querySelector("#year").textContent =
-    new Date().getFullYear();
-
-
-// 7. WELCOME MESSAGE IN CONSOLE
-
-console.log("Welcome to ECOCODE!");
-console.log("Learn. Practice. Create.");
+const translations={en:{home:'Home',courses:'Courses',playground:'Playground',about:'About'},ru:{home:'Главная',courses:'Курсы',playground:'Практика',about:'О проекте'},tg:{home:'Асосӣ',courses:'Курсҳо',playground:'Машқгоҳ',about:'Дар бораи мо'}};
+const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lessons=Object.fromEntries(Object.entries(courses).map(([key,c])=>[key,c.sections.flatMap(([section,items])=>items.map(([title,body,code,question,answers,correct])=>({section,title,body,code,question,answers,correct})))]));
+const total=Object.values(lessons).reduce((sum,a)=>sum+a.length,0);$('#lessonCount').textContent=total;$('#year').textContent=new Date().getFullYear();
+function readProgress(){try{return JSON.parse(localStorage.getItem('ecocode-progress')||'{}')}catch{return {}}}let progress=readProgress();function saveProgress(){try{localStorage.setItem('ecocode-progress',JSON.stringify(progress))}catch{}}
+$('#courseStrip').innerHTML=Object.entries(courses).map(([id,c])=>`<a href="#course/${id}/0">${c.name}</a>`).join('');
+$('#courseGrid').innerHTML=Object.entries(courses).map(([id,c])=>`<article class="course-card"><div class="course-icon">${c.icon}</div><h3>${c.name}</h3><p>${c.desc}</p><div class="course-meta">${lessons[id].length} lessons · Beginner friendly</div><a class="btn primary" href="#course/${id}/0">Start ${c.name} →</a></article>`).join('');
+function showView(id){$$('.view').forEach(v=>v.classList.add('hidden'));$(id).classList.remove('hidden');$('#sidebar').classList.remove('open');window.scrollTo(0,0)}
+function route(){let hash=decodeURIComponent(location.hash.slice(1)||'home');if(hash.startsWith('course/')){let [,id,n]=hash.split('/');if(!lessons[id]){location.hash='courses';return}renderLesson(id,Math.min(Math.max(Number(n)||0,0),lessons[id].length-1));showView('#lessonView')}else if(hash==='playground'){showView('#playgroundView');runCode()}else if(hash.startsWith('search/')){showView('#searchView');renderSearch(hash.slice(7))}else{showView('#homeView');if(hash==='courses'||hash==='about')setTimeout(()=>document.getElementById(hash)?.scrollIntoView(),30)}}
+function renderLesson(id,index){const c=courses[id],ls=lessons[id],l=ls[index];$('#sidebarTitle').textContent=c.name+' Tutorial';$('#breadcrumbs').textContent=`Courses / ${c.name} / ${l.title}`;const done=ls.filter((_,i)=>progress[`${id}:${i}`]).length;$('#progressBar').style.width=`${Math.round(done/ls.length*100)}%`;$('#progressLabel').textContent=`${done} of ${ls.length} lessons complete`;
+let last='';$('#lessonLinks').innerHTML=ls.map((item,i)=>{let section=item.section!==last?`<div class="sidebar-group">${esc(item.section)}</div>`:'';last=item.section;return `${section}<a class="lesson-link ${i===index?'active':''} ${progress[`${id}:${i}`]?'done':''}" href="#course/${id}/${i}">${esc(item.title)}</a>`}).join('');
+$('#lessonContent').innerHTML=`<h1>${esc(c.name)} ${esc(l.title)}</h1><p>${esc(l.body)}</p><h2>Example</h2><p>Study this example and try changing it yourself.</p><div class="example"><h3>Code example</h3><pre><code>${esc(l.code)}</code></pre><div class="example-actions"><button class="btn subtle" id="copyExample">Copy code</button>${['html','css','javascript'].includes(id)?'<button class="btn primary" id="tryExample">Try it yourself →</button>':''}</div></div><div class="tip"><strong>Practice tip:</strong> Type the example yourself instead of only copying it. Small changes help you understand the code.</div><div class="quiz"><h3>🧠 Quick quiz</h3><p>${esc(l.question)}</p><div id="quizOptions">${l.answers.map((a,i)=>`<label><input type="radio" name="quiz" value="${i}"> ${esc(a)}</label>`).join('')}</div><button class="btn primary" id="checkQuiz">Check answer</button><div class="quiz-result" id="quizResult" role="status"></div></div>`;
+$('#copyExample').onclick=()=>{navigator.clipboard?.writeText(l.code).then(()=>{$('#copyExample').textContent='Copied ✓'}).catch(()=>{$('#copyExample').textContent='Select and copy the code'})};const tryBtn=$('#tryExample');if(tryBtn)tryBtn.onclick=()=>{if(id==='html')$('#htmlEditor').value=l.code;else if(id==='css')$('#cssEditor').value=l.code;else $('#jsEditor').value=l.code;location.hash='playground'};
+$('#checkQuiz').onclick=()=>{let choice=$('input[name="quiz"]:checked');$('#quizResult').textContent=!choice?'Choose an answer first.':Number(choice.value)===l.correct?'Correct! Great work 🎉':`Not quite. The correct answer is: ${l.answers[l.correct]}`;$('#quizResult').style.color=choice&&Number(choice.value)===l.correct?'#087f70':'#b34a3c'};
+$('#completeLesson').textContent=progress[`${id}:${index}`]?'Completed ✓':'Mark as complete ✓';$('#completeLesson').onclick=()=>{progress[`${id}:${index}`]=true;saveProgress();renderLesson(id,index)};$('#prevLesson').disabled=index===0;$('#nextLesson').disabled=index===ls.length-1;$('#prevLesson').onclick=()=>location.hash=`course/${id}/${index-1}`;$('#nextLesson').onclick=()=>location.hash=`course/${id}/${index+1}`;
+$('#lessonSearch').value='';filterSidebar('')}
+function filterSidebar(q){$$('.lesson-link').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q.toLowerCase())?'':'none')}
+$('#lessonSearch').addEventListener('input',e=>filterSidebar(e.target.value));$('#closeSidebar').onclick=()=>$('#sidebar').classList.remove('open');$('#menuBtn').onclick=()=>{let nav=$('.main-nav');nav.classList.toggle('open');$('#menuBtn').setAttribute('aria-expanded',nav.classList.contains('open'))};
+const starter={html:'<h1>Hello, ECOCODE! 👋</h1>\n<p>Change this text and press Run.</p>\n<button onclick="sayHello()">Click me</button>',css:'body {\n  font-family: Arial, sans-serif;\n  padding: 24px;\n  background: #f0fbf8;\n}\nh1 { color: #087f70; }\nbutton { padding: 10px 16px; }',js:'function sayHello() {\n  alert("Welcome to ECOCODE!");\n}'};
+function resetCode(){Object.entries(starter).forEach(([k,v])=>$('#'+k+'Editor').value=v);runCode()}function runCode(){const html=$('#htmlEditor').value,css=$('#cssEditor').value.replace(/<\/style/gi,'<\\/style'),js=$('#jsEditor').value.replace(/<\/script/gi,'<\\/script');$('#preview').srcdoc=`<!doctype html><html><head><meta charset="UTF-8"><style>${css}</style></head><body>${html}<script>${js}<\/script></body></html>`}$('#runCode').onclick=runCode;$('#resetCode').onclick=resetCode;resetCode();
+function renderSearch(term){let q=term.toLowerCase().trim();let matches=Object.entries(lessons).flatMap(([id,ls])=>ls.map((l,i)=>({id,i,l}))).filter(x=>x.l.title.toLowerCase().includes(q)||x.l.body.toLowerCase().includes(q)||x.id.includes(q));$('#searchSummary').textContent=`${matches.length} result(s) for “${term}”`;$('#searchResults').innerHTML=matches.length?matches.map(x=>`<a class="search-item" href="#course/${x.id}/${x.i}"><strong>${esc(courses[x.id].name)} — ${esc(x.l.title)}</strong><small>${esc(x.l.body.slice(0,130))}...</small></a>`).join(''):'<p>No lessons found. Try a different keyword.</p>'}
+$('#globalSearch').addEventListener('keydown',e=>{if(e.key==='Enter'){location.hash='search/'+encodeURIComponent(e.target.value.trim())}});$('#language').addEventListener('change',e=>{const lang=e.target.value;document.documentElement.lang=lang;$$('[data-i18n]').forEach(el=>el.textContent=translations[lang][el.dataset.i18n]);try{localStorage.setItem('ecocode-language',lang)}catch{}});try{$('#language').value=localStorage.getItem('ecocode-language')||'en'}catch{}$('#language').dispatchEvent(new Event('change'));window.addEventListener('hashchange',route);route();
