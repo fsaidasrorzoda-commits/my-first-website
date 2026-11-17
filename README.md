@@ -1,28 +1,17 @@
-# ECOCODE
+# ECOCODE — Creative Coding Academy
 
-A free, static programming learning website inspired by the navigation and hands-on learning experience of W3Schools, with original design and content.
-
-## Launch
-Upload all files and folders to the root of your existing `my-first-website` GitHub repository. Keep GitHub Pages set to deploy from the main branch root. Visit your existing GitHub Pages URL.
+Free beginner coding platform built for GitHub Pages.
 
 ## Features
-- Six courses (HTML, CSS, JavaScript, Python, C++, SQL)
-- Lesson sidebar, searchable topics, examples, quizzes
-- HTML/CSS/JS playground with iframe preview
-- Local progress tracking
-- English/Russian/Tajik interface selection (lesson bodies currently English)
-- Responsive design
+- 30 technologies with starter lessons and quizzes
+- Searchable course catalog and lesson navigation
+- Browser HTML/CSS/JavaScript code playground
+- Offline rule-based Code Coach (not a connected AI)
+- Local progress saving
+- Responsive layout
 
-## Files
-- index.html — application shell
-- style.css — site styles
-- script.js — application logic and lessons
+## Publishing
+Upload index.html, style.css, script.js, README.md to your repository root and enable GitHub Pages on the main branch.
 
-## Note
-This is a front-end learning platform starter, not the full editorial catalog of W3Schools. Python, C++, and SQL examples are displayed but cannot be executed in the browser without an additional execution service.
-
-## New interactive features
-- Code Lab supports HTML/CSS/JavaScript live preview, local save and HTML download.
-- Code Coach is an offline rule-based study helper, **not** a connected generative AI agent.
-- To connect a real AI model, use a secure serverless/backend API; never expose API credentials in public client-side code.
-- Python, C++ and SQL execution are not included; these need language runtimes or secure sandbox services.
+## Important limitations
+New courses are introductory starter modules, not complete curricula. The playground only executes browser HTML/CSS/JavaScript. Other languages need separate secure runtimes. The coach is rule-based and cannot provide generative AI responses. Language selector translates limited navigation labels only.
