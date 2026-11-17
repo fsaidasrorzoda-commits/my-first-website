@@ -1,148 +1,200 @@
 
+/* =================================
+   ECOCODE - JAVASCRIPT
+================================= */
 
-/* =====================================
-   1. TYPING ANIMATION
-===================================== */
+// 1. MOBILE NAVIGATION
 
-const typingText = document.getElementById("typing-text");
+const menuToggle = document.querySelector("#menuToggle");
+const navLinks = document.querySelector("#navLinks");
 
-const words = [
-    "IT Teacher",
-    "Programmer",
-    "Technology Enthusiast",
-    "Lifelong Learner"
-];
+menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("show");
 
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeEffect() {
-    const currentWord = words[wordIndex];
-
-    if (deleting) {
-        charIndex--;
-    } else {
-        charIndex++;
-    }
-
-    typingText.textContent = currentWord.substring(0, charIndex);
-
-    let speed = deleting ? 50 : 100;
-
-    if (!deleting && charIndex === currentWord.length) {
-        deleting = true;
-        speed = 1500;
-    } else if (deleting && charIndex === 0) {
-        deleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        speed = 500;
-    }
-
-    setTimeout(typeEffect, speed);
-}
-
-if (typingText) {
-    typeEffect();
-}
-
-
-/* =====================================
-   2. DARK / LIGHT MODE
-===================================== */
-
-const themeToggle = document.getElementById("theme-toggle");
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeToggle.textContent = "🌙 Dark Mode";
-}
-
-themeToggle.addEventListener("click", function() {
-
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
-        themeToggle.textContent = "🌙 Dark Mode";
-        localStorage.setItem("theme", "light");
-    } else {
-        themeToggle.textContent = "☀️ Light Mode";
-        localStorage.setItem("theme", "dark");
-    }
-
-});
-
-
-/* =====================================
-   3. MOBILE HAMBURGER MENU
-===================================== */
-
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", function() {
-
-    navLinks.classList.toggle("show");
-
-    const isOpen = navLinks.classList.contains("show");
-
-    menuToggle.textContent = isOpen ? "✕" : "☰";
     menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close menu" : "Open menu"
-    );
-
+    menuToggle.textContent = isOpen ? "✕" : "☰";
 });
 
-const navItems = document.querySelectorAll("#nav-links a");
+// Close mobile menu after selecting a link
 
-navItems.forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+    link.addEventListener("click", function () {
         navLinks.classList.remove("show");
-
-        menuToggle.textContent = "☰";
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open menu");
+        menuToggle.textContent = "☰";
+    });
+});
+
+
+// 2. COURSE SEARCH
+
+const courseSearch = document.querySelector("#courseSearch");
+const courseCards = document.querySelectorAll(".course-card");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const noResults = document.querySelector("#noResults");
+
+let currentFilter = "all";
+
+function filterCourses() {
+
+    const searchText = courseSearch.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    courseCards.forEach(function (card) {
+
+        const category = card.dataset.category;
+        const content = card.textContent.toLowerCase();
+
+        const matchesSearch = content.includes(searchText);
+
+        const matchesFilter =
+            currentFilter === "all" ||
+            category === currentFilter;
+
+        const shouldShow = matchesSearch && matchesFilter;
+
+        card.hidden = !shouldShow;
+
+        if (shouldShow) {
+            visibleCount++;
+        }
+
+    });
+
+    noResults.hidden = visibleCount !== 0;
+}
+
+courseSearch.addEventListener("input", filterCourses);
+
+
+// 3. COURSE FILTER BUTTONS
+
+filterButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        filterButtons.forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        currentFilter = button.dataset.filter;
+
+        filterCourses();
 
     });
 
 });
 
 
-/* =====================================
-   4. BACK TO TOP BUTTON
-===================================== */
+// 4. COURSE DETAILS
 
-const backToTop = document.getElementById("back-to-top");
+const courseDetails = document.querySelector("#courseDetails");
+const detailTitle = document.querySelector("#detailTitle");
+const detailDescription = document.querySelector("#detailDescription");
+const detailLevel = document.querySelector("#detailLevel");
+const closeDetails = document.querySelector("#closeDetails");
 
-window.addEventListener("scroll", function() {
+const courseInformation = {
 
-    if (window.scrollY > 300) {
-        backToTop.style.display = "block";
-    } else {
-        backToTop.style.display = "none";
+    html: {
+        title: "HTML - Web Structure",
+        description: "Learn HTML elements, headings, paragraphs, links, images, lists and forms. Build your first webpage.",
+        level: "Beginner | Web Development"
+    },
+
+    css: {
+        title: "CSS - Web Design",
+        description: "Learn colors, backgrounds, typography, spacing, Flexbox, Grid and responsive web design.",
+        level: "Beginner | Web Development"
+    },
+
+    javascript: {
+        title: "JavaScript - Web Interaction",
+        description: "Learn variables, data types, conditions, loops, functions and interactive webpage features.",
+        level: "Beginner | Web Development"
+    },
+
+    python: {
+        title: "Python - Programming",
+        description: "Start with variables, input, output, conditions, loops and functions using Python.",
+        level: "Beginner | Programming"
+    },
+
+    cpp: {
+        title: "C++ - Programming",
+        description: "Learn program structure, variables, input, output, if/else, loops and functions.",
+        level: "Beginner | Programming"
+    },
+
+    sql: {
+        title: "SQL - Database",
+        description: "Understand databases, tables, records and SQL commands such as SELECT, INSERT, UPDATE and DELETE.",
+        level: "Beginner | Database"
     }
 
-});
+};
 
-backToTop.addEventListener("click", function() {
+document.querySelectorAll(".course-link").forEach(function (button) {
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    button.addEventListener("click", function () {
+
+        const courseName = button.dataset.course;
+        const course = courseInformation[courseName];
+
+        if (!course) return;
+
+        detailTitle.textContent = course.title;
+        detailDescription.textContent = course.description;
+        detailLevel.textContent = course.level;
+
+        courseDetails.hidden = false;
+
+        courseDetails.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
     });
 
 });
-const changeTextButton = document.querySelector("#changeTextBtn");
-const message = document.querySelector("#message");
 
-if (changeTextButton && message) {
-    changeTextButton.addEventListener("click", function() {
-        message.textContent = "Excellent! I changed this text using JavaScript! 🚀";
-    });
-}
+
+// CLOSE COURSE DETAILS
+
+closeDetails.addEventListener("click", function () {
+    courseDetails.hidden = true;
+});
+
+
+// 5. CONTACT FORM DEMONSTRATION
+
+const contactForm = document.querySelector("#contactForm");
+const formMessage = document.querySelector("#formMessage");
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const name = document.querySelector("#userName").value.trim();
+
+    formMessage.textContent =
+        "Thank you, " + name +
+        "! Your form works, but message delivery is not connected yet.";
+
+    contactForm.reset();
+
+});
+
+
+// 6. AUTOMATIC COPYRIGHT YEAR
+
+document.querySelector("#year").textContent =
+    new Date().getFullYear();
+
+
+// 7. WELCOME MESSAGE IN CONSOLE
+
+console.log("Welcome to ECOCODE!");
+console.log("Learn. Practice. Create.");
